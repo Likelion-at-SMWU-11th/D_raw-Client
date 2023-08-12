@@ -57,7 +57,7 @@ const MatchingPage = () => {
       <BoxContainer>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="song.png" alt="song" />
+            <Image src="who.png" alt="who" />
             <div style={{ marginLeft: "10px", textAlign: "center" }}>
               <h4>D:raw</h4>
               <p>💬 매칭 중</p>
@@ -67,17 +67,25 @@ const MatchingPage = () => {
           <MatchingButton>매칭 취소하기</MatchingButton>
         </Box>
         <Box>
-          <Image src="image2.png" alt="Image 2" />
-          <p>D:raw</p>
-          <p>✔ 이용 예정</p>
-          <p>2023.08.25(금) 오후 1시~3시</p>
+          <div style={{ display: "flex", alignItems: "flex-start" }}>
+            <Image src="song.png" alt="song" />
+            <div style={{ marginLeft: "10px", textAlign: "center" }}>
+              <h4>D:raw</h4>
+              <p>✔ 이용 예정</p>
+              <p>2023.08.25(금) 오후 1시~3시</p>
+            </div>
+          </div>
           <MatchingButton>매칭 취소하기</MatchingButton>
         </Box>
         <Box>
-          <Image src="image3.png" alt="Image 3" />
-          <p>D:raw</p>
-          <p>✔ 이용 완료</p>
-          <p>2023.08.18(금) 오후 1시~3시</p>
+          <div style={{ display: "flex", alignItems: "flex-start" }}>
+            <Image src="lion.png" alt="lion" />
+            <div style={{ marginLeft: "10px", textAlign: "center" }}>
+              <h4>D:raw</h4>
+              <p>✔ 이용 완료</p>
+              <p>2023.08.18(금) 오후 1시~3시</p>
+            </div>
+          </div>
           <MatchingButton onClick={handleContinueClick}>
             칭찬 도장 주기
           </MatchingButton>

@@ -5,6 +5,8 @@ import MainScreen from "./components/MainScreen";
 import MatchingPage from "./components/MatchingPage";
 import ComplimentPage from "./components/ComplimentPage";
 import MorePage from "./components/MorePage";
+import AccountPage from "./components/AccountPage";
+import ServicePage from "./components/ServicePage";
 import "./App.css";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/matching" element={<MatchingPage />} />
           <Route path="/compliment" element={<ComplimentPage />} />
           <Route path="/more" element={<MorePage />} />
+          <Route path="/account" element={<AccountPage />} />
+          <Route path="/service" element={<ServicePage />} />
         </Routes>
       </div>
     </Router>

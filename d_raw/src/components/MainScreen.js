@@ -13,6 +13,11 @@ const MainContainer = styled.div`
   padding: 20px;
 `;
 
+const MainImage = styled.img`
+  width: 70px;
+  height: 70px;
+`;
+
 const LeftAlignedHeading = styled.div`
   font-weight: bold;
   text-align: left;
@@ -35,26 +40,46 @@ const MainScreen = () => {
       <ApplyButton />
       <LeftAlignedHeading>
         <h3>우수 D:raw 안내사</h3>
-        <p>
-          1. 김눈*
-          <br />
-          🏅(78)
-        </p>
-        <p>
-          2. 웨이*
-          <br />
-          🏅(61)
-        </p>
-        <p>
-          3.김사*
-          <br />
-          🏅(45)
-        </p>
-        <p>
-          4. 이댕*
-          <br />
-          🏅(41)
-        </p>
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
+          <MainImage src="song.png" alt="song" />
+          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+            <p>
+              1. 김눈*
+              <br />
+              🏅(75)
+            </p>
+          </div>
+        </div>
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
+          <MainImage src="wade.png" alt="wade" />
+          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+            <p>
+              2. 웨이*
+              <br />
+              🏅(61)
+            </p>
+          </div>
+        </div>
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
+          <MainImage src="lion.png" alt="lion" />
+          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+            <p>
+              3.김사*
+              <br />
+              🏅(45)
+            </p>
+          </div>
+        </div>
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
+          <MainImage src="dog.png" alt="dog" />
+          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+            <p>
+              4. 이댕*
+              <br />
+              🏅(41)
+            </p>
+          </div>
+        </div>
         <br />
         <hr />
         <Footer />

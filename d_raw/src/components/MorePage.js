@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
 const MoreContainer = styled.div`
@@ -21,18 +22,20 @@ const LeftAlignedHeading = styled.div`
 const Heading = styled.h3`
   font-weight: bold;
 `;
+const BoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
-const MoreButton = styled.button`
-  padding: 5px 150px;
-  display: block; /* 요소를 블록 레벨로 변경 */
-  width: 100%; /* 전체 너비를 차지하도록 설정 */
-  text-align: left; /* 내부 텍스트를 왼쪽 정렬 */
-  font-size: 1rem;
-  font-weight: bold;
-  border: 0px white;
-  margin: 5px;
-  color: black;
-  background: white;
+const Box = styled.div`
+  border: 2px solid #ccc;
+  padding: 10px;
+  background: #e6e6e6;
+  border: 3px #e6e6e6;
+  white-space: nowrap;
+  font-size: 13.5px;
+  text-align: left;
 `;
 
 const MorePage = () => {
@@ -44,19 +47,34 @@ const MorePage = () => {
             <h4>안녕하세요. 김눈송님!</h4>
           </div>
         </Heading>
-        <p>설정</p>
-        <MoreButton>계정</MoreButton>
+        <BoxContainer>
+          <Box>설정</Box>
+        </BoxContainer>
+        <Link to="/account">계정</Link>
         <hr />
         <p>앱 알림</p>
-        <p>서비스 이용</p>
+        <BoxContainer>
+          <Box>서비스 이용</Box>
+        </BoxContainer>
         <p>D:raw 서비스 이용내역</p>
-        <p>고객센터</p>
+        <BoxContainer>
+          <Box>고객센터</Box>
+        </BoxContainer>
         <p>공지사항</p>
         <hr />
         <p>자주 묻는 질문</p>
         <hr />
         <p>1:1 채팅 상담</p>
-        <hr />
+        <p>평일 09:00~18:00, 점심시간 13:00~14:00</p>
+        <br />
+        <BoxContainer>
+          <Box>
+            <h4>D:raw 고객센터 1588-1588</h4>
+            <p>평일 오전 9시~오후 6시, 점심시간 오후 1시~2시</p>
+            *주말은 기초상담, 긴급문의 접수만 가능
+            <p>사업자정보확인 | 이용약관 | 개인정보처리방침</p>
+          </Box>
+        </BoxContainer>
         <Footer />
       </LeftAlignedHeading>
     </MoreContainer>

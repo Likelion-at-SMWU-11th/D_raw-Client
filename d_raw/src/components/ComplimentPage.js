@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
 const ComplimentContainer = styled.div`
   text-align: center;
   width: 362px;
@@ -79,6 +80,7 @@ const ComplimentPage = () => {
         </div>
       </div>
       <br />
+      <hr />
       <h3 align="left">자세한 리뷰를 작성해주세요</h3>
       <p align="left">
         친절함/성실도/도움 여부 등에 대한 경험을 <br />
