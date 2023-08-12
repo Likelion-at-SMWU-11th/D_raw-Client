@@ -2,6 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Homelogo from "./Homelogo";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -10,20 +11,7 @@ const HomeContainer = styled.div`
   align-items: center;
   width: 362px;
   height: 800px;
-  background-color: orange;
-`;
-
-const Title = styled.h1`
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-`;
-
-const Content = styled.p`
-  font-size: 16px;
-  text-align: center;
-  color: white;
+  background-color: #ff971e;
 `;
 
 const HomeScreen = () => {
@@ -35,13 +23,8 @@ const HomeScreen = () => {
 
   return (
     <HomeContainer>
-      <Title>D:raw</Title>
-      <Content>
-        디지털 이용 불편함,
-        <br />
-        이젠 디지털 안내사와 함께 해보세요!
-      </Content>
-      <button onClick={handleContinueClick}>Go to Main</button>
+      <Homelogo />
+      <button onClick={handleContinueClick}>메인화면 가기</button>
     </HomeContainer>
   );
 };
