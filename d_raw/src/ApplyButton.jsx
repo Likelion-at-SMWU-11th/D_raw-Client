@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledButton = styled.button`
     padding: 10px 100px;
@@ -17,7 +18,8 @@ const StyledButton = styled.button`
 const ApplyButton = () => {
     return (
         <div>
-            <StyledButton>바로 신청하기 ▶</StyledButton> 
+            <Link to="/service">
+            <StyledButton>바로 신청하기 ▶</StyledButton></Link>
             <br /> 
             <StyledButton>매칭 찾아보기 ▶</StyledButton>
             <hr />

@@ -7,6 +7,9 @@ import ComplimentPage from "./components/ComplimentPage";
 import MorePage from "./components/MorePage";
 import AccountPage from "./components/AccountPage";
 import ServicePage from "./components/ServicePage";
+import Service2Page from "./components/Service2Page";
+import Service3Page from "./components/Service3Page";
+import Service4Page from "./components/Service4Page";
 import "./App.css";
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
           <Route path="/more" element={<MorePage />} />
           <Route path="/account" element={<AccountPage />} />
           <Route path="/service" element={<ServicePage />} />
+          <Route path="/service2" element={<Service2Page />} />
+          <Route path="/service3" element={<Service3Page />} />
+          <Route path="/service4" element={<Service4Page />} />
         </Routes>
       </div>
     </Router>

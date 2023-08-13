@@ -28,10 +28,17 @@ const SDatePicker = styled(DatePicker)`
   font-size: 12px;
 `;
 
-const DateButton = styled.button`
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+const SelectedDate = styled.div`
+  width: 200px;
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid ${theme.palette.orange};
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: orange;
 `;
 
 const DatePickerExample = () => {
@@ -41,23 +48,15 @@ const DatePickerExample = () => {
     setSelectedDate(date);
   };
 
-  const renderSelectedDateButton = () => {
+  const renderSelectedDate = () => {
     if (selectedDate) {
       const formattedDate = selectedDate.toLocaleDateString("ko-KR", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        weekday: "long",
+        month: "short",
+        day: "2-digit",
       });
+      const selectedCompleteText = `${formattedDate} 선택완료`;
 
-      return (
-        <DateButton>
-          <span style={{ color: theme.palette.orange }}>
-            {formattedDate}
-            &nbsp;&#9898;
-          </span>
-        </DateButton>
-      );
+      return <SelectedDate>{selectedCompleteText}</SelectedDate>;
     }
     return null;
   };
@@ -76,8 +75,9 @@ const DatePickerExample = () => {
           startDate={selectedDate}
           endDate={selectedDate}
         />
-        {renderSelectedDateButton()}
       </DateContainer>
+      <br />
+      {renderSelectedDate()}
     </ThemeProvider>
   );
 };
