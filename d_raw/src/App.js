@@ -6,6 +6,8 @@ import MatchingPage from "./components/MatchingPage";
 import ComplimentPage from "./components/ComplimentPage";
 import MorePage from "./components/MorePage";
 import AccountPage from "./components/AccountPage";
+import NoticePage from "./components/NoticePage";
+import QuestionPage from "./components/QuestionPage";
 import ServicePage from "./components/ServicePage";
 import Service2Page from "./components/Service2Page";
 import Service3Page from "./components/Service3Page";
@@ -23,6 +25,8 @@ function App() {
           <Route path="/compliment" element={<ComplimentPage />} />
           <Route path="/more" element={<MorePage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/notice" element={<NoticePage />} />
+          <Route path="/question" element={<QuestionPage />} />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/service2" element={<Service2Page />} />
           <Route path="/service3" element={<Service3Page />} />

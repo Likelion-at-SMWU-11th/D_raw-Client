@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -20,11 +20,6 @@ const Title = styled.h3`
   text-align: left;
 `;
 
-const Describe = styled.p`
-  font-size: 14px;
-  text-align: left;
-`;
-
 const Image = styled.img`
   width: 100%;
   height: 23px;
@@ -43,7 +38,43 @@ const NextButton = styled.button`
   cursor: pointer;
 `;
 
+const ScrollableNumberPicker = styled.select`
+  width: 80px;
+  font-size: 16px;
+`;
+
+const YearLabel = styled.span`
+  margin-left: 5px;
+`;
+
+const RadioButtonContainer = styled.div`
+  text-align: left;
+  margin-top: 10px;
+`;
+
+const RadioButton = styled.input`
+  margin-right: 5px;
+`;
+
 const Service3Page = () => {
+  const [selectedBirthYear, setSelectedBirthYear] = useState(2023);
+  const [selectedVisualImpairment, setSelectedVisualImpairment] = useState("");
+  const [selectedGender, setSelectedGender] = useState("");
+
+  const handleYearChange = (event) => {
+    setSelectedBirthYear(event.target.value);
+  };
+
+  const handleVisualImpairmentChange = (event) => {
+    setSelectedVisualImpairment(event.target.value);
+  };
+
+  const handleGenderChange = (event) => {
+    setSelectedGender(event.target.value);
+  };
+
+  const isFormValid = selectedVisualImpairment && selectedGender;
+
   return (
     <Service3Container>
       <Heading>매칭 신청</Heading>
@@ -59,18 +90,84 @@ const Service3Page = () => {
         <p>
           <strong>시각장애 여부</strong>
         </p>
+        <RadioButtonContainer>
+          <label>
+            <RadioButton
+              type="radio"
+              name="visualImpairment"
+              value="none"
+              onChange={handleVisualImpairmentChange}
+            />{" "}
+            없음
+          </label>
+          <label>
+            <RadioButton
+              type="radio"
+              name="visualImpairment"
+              value="mild"
+              onChange={handleVisualImpairmentChange}
+            />{" "}
+            경증 장애
+          </label>
+          <label>
+            <RadioButton
+              type="radio"
+              name="visualImpairment"
+              value="severe"
+              onChange={handleVisualImpairmentChange}
+            />{" "}
+            중증 장애
+          </label>
+        </RadioButtonContainer>
+        <br />
+        <hr />
         <p>
           <strong>출생년도</strong>
         </p>
+        <br />
+        <ScrollableNumberPicker
+          value={selectedBirthYear}
+          onChange={handleYearChange}
+        >
+          {Array.from({ length: 124 }, (_, index) => (
+            <option key={2023 - index} value={2023 - index}>
+              {2023 - index}
+            </option>
+          ))}
+        </ScrollableNumberPicker>
+        <YearLabel>년</YearLabel>
+        <br />
+        <br />
+        <hr />
         <p>
           <strong>성별</strong>
         </p>
+        <RadioButtonContainer>
+          <label>
+            <RadioButton
+              type="radio"
+              name="gender"
+              value="female"
+              onChange={handleGenderChange}
+            />{" "}
+            여성
+          </label>
+          <label>
+            <RadioButton
+              type="radio"
+              name="gender"
+              value="male"
+              onChange={handleGenderChange}
+            />{" "}
+            남성
+          </label>
+        </RadioButtonContainer>
       </div>
       <br />
       <br />
       <br />
       <Link to="/service4">
-        <NextButton>다음</NextButton>
+        <NextButton disabled={!isFormValid}>다음</NextButton>
       </Link>
     </Service3Container>
   );

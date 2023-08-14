@@ -60,9 +60,9 @@ const MorePage = () => {
         <BoxContainer>
           <Box>고객센터</Box>
         </BoxContainer>
-        <p>공지사항</p>
+        <Link to="/notice">공지사항</Link>
         <hr />
-        <p>자주 묻는 질문</p>
+        <Link to="/question">자주 묻는 질문</Link>
         <hr />
         <p>1:1 채팅 상담</p>
         <p>평일 09:00~18:00, 점심시간 13:00~14:00</p>

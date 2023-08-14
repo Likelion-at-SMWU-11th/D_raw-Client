@@ -35,9 +35,10 @@ const NextButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.5;
-  border: 3px solid ${(props) => (props.active ? "orange" : "#ccc")};
+  border: 3px solid ${(props) => (props.active ? "orange" : "#ff971e")}; // 주황색으로 변경
   color: white;
-  background: ${(props) => (props.active ? "#ff971e" : "#ccc")};
+  background: ${(props) =>
+    props.active ? "#ff971e" : "orange"}; // 주황색과 회색을 바꿈
   white-space: nowrap;
   cursor: ${(props) => (props.active ? "pointer" : "default")};
 `;
@@ -97,7 +98,7 @@ const ServicePage = () => {
         <br />
         <br />
         <Link to="/service2">
-          <NextButton>다음</NextButton>
+          <NextButton active={isNextButtonActive}>다음</NextButton>
         </Link>
       </ServiceContainer>
     </ThemeProvider>
