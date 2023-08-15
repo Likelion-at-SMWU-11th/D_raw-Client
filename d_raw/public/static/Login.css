@@ -1,0 +1,31 @@
+div .content{
+    max-width: 362px;
+    color:grey;
+    font-size:15px;
+    padding: 10px 10px 10px 10px;
+}
+
+.wrap {
+    max-width: 362px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+ }
+
+ .bar{
+ flex: auto;
+ border: none;
+ height: 1px;
+ background-color: grey;
+ 
+ }
+
+ .txt {
+ padding: 0 10px;
+ color: grey;
+ font-weight: 100px;
+ }
+ 
+ .login_Button{
+    cursor: pointer;
+ }
