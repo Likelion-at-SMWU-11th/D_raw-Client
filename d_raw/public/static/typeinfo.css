@@ -1,0 +1,46 @@
+#wrapper {
+    width: 151px;
+    text-align: center;
+    margin: 10px 5px 15px 5px;
+    border: 1px solid grey;
+    display: inline-block;
+    padding: 8px 12px ;
+    font-size: 15px;
+  }
+
+.textarea{
+    margin: 10px auto;
+    width: 315px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.numarea{
+    margin: 10px auto;
+    width: 280px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.add{
+    border-radius: 10px;
+    display: block;
+    background-color: white;
+    border: 1px solid grey;
+    width: 320px;
+    height: 40px;
+    margin: 10px auto;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.select{
+    font-size: 20px;
+    font:'Noto Sans KR';
+}
+
+.gender{
+
+}

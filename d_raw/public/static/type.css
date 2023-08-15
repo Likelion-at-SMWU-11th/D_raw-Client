@@ -1,0 +1,43 @@
+.type{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+span{
+    color:orange;
+    font-weight: bold;
+}
+
+.user_type_background{
+    color: black;
+    font-size: 25px;
+    font-weight: 700;    
+    background-color: orange;
+    background: linear-gradient(to bottom, white 50%, orange 50%);
+}
+
+.select_type {
+    width: 305px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0px auto;
+    background-color: white;
+    text-align: center;
+    border-style:solid;
+    font-size: 18px;
+    border: 1.5px solid #E0DCDC;
+    margin-top: 20px;
+}
+
+label .textorange{
+    color:orange;
+    font-weight: 900;
+}
+
+.next{
+    float: right;
+    cursor: pointer;
+    text-align: right;
+}

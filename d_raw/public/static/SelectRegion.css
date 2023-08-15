@@ -1,0 +1,50 @@
+hr{
+    color:grey;
+}
+.checked {
+    width: 150px;
+    height: 35px;
+    display: inline-block;
+    background-image: none;
+    font: 0.8rem 'Noto Sans KR';
+    font-weight: 900;
+    text-align: center;
+    color:#ffa500;
+    background: #F9D1CF;
+    border: 1px solid #FF971E;
+    padding: 6px 11px;
+    margin: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.checkbox{
+    width: 150px;
+    height: 35px;
+    display: inline-block;
+    font: 0.8rem 'Noto Sans KR';
+    font-weight: 900;
+    text-align: center;
+    background: #f5f6f7;
+    border: 1px solid #ddd;
+    padding: 6px 11px;
+    margin: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.apply{
+    border: none;
+    background-color: #FF971E;
+    color: white;
+    display: block;
+    width: 325px;
+    height: 56px;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: 15px;
+}
