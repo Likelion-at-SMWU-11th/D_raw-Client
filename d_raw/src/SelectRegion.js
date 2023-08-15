@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./static/Base.css";
 import "./static/SelectRegion.css";
 
 const SelectRegion = () => {
   const [selectedValue, setSelectedValue] = useState("");
+  const navigate = useNavigate();
   /*   const [selectedValues, setSelectedValues] = useState(""); */
 
   const availableOptions = [
@@ -33,6 +35,10 @@ const SelectRegion = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Selected Value:", selectedValue); // 변경된 로그 메시지
+  };
+
+  const goToMain = () => {
+    navigate("/main");
   };
 
   /* 여러 개 선택 가능 
@@ -88,7 +94,7 @@ const SelectRegion = () => {
         ))}  */}
         <br />
         <br />
-        <button type="submit" className="apply">
+        <button type="submit" className="apply" onClick={goToMain}>
           적용하기
         </button>
       </form>

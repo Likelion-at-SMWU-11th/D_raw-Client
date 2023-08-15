@@ -2,7 +2,7 @@ hr{
     color:grey;
 }
 .checked {
-    width: 150px;
+    width: 138px;
     height: 35px;
     display: inline-block;
     background-image: none;
@@ -20,7 +20,7 @@ hr{
 }
 
 .checkbox{
-    width: 150px;
+    width: 138px;
     height: 35px;
     display: inline-block;
     font: 0.8rem 'Noto Sans KR';
