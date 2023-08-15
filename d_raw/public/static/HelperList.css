@@ -1,0 +1,85 @@
+.helperlist_div{
+    position: absolute;
+/*     height: 800px;
+    max-height: 800px;
+    overflow-y: hidden scroll; */
+}
+
+div .helper_notice{
+    width: 322px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #E0DCDC;
+    text-align: center;
+    color: #878181;
+    font-size: 13px;
+}
+
+.helperlist{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    position: relative;
+    margin-top: 15px;
+    width: 322px;
+    border: 1px solid black;
+}
+
+.helperlist_content_left{
+    padding-top: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.helperlist_content_right{
+    margin-bottom: 10px;
+    display: inline-block;
+    float:right;
+}
+
+.helperlist_image{
+    display: inline-block;
+    border: 1px solid #878181;
+    width: 85px;
+    height: 85px;
+}
+
+.helperlist_image_detail{
+
+    font-size: 15px;
+    font-weight: 500;
+    color:#878181;
+    cursor: pointer;
+}
+
+.helperlist_name{
+    color:black;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.helperlist_time{
+    color:#878181;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.helperlist_stamp{
+    color:black;
+    font-size: 15px;
+}
+
+.add_profile{
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid grey;
+    text-align: center;
+    cursor: pointer;
+}
