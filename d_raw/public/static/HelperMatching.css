@@ -1,0 +1,42 @@
+.helper_findingMatching{
+    display: flex;
+    align-items: center;
+}
+
+.helper_matching{
+    width: 200px;
+    text-align: center;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 5px;
+    padding-right: 0px;
+}
+
+
+.helper_matching_button{
+    border: none;
+    outline: none;
+    background-color: inherit ;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: #B3B3B3;
+}
+
+
+.active{
+    color:#FF971E;
+    
+}
+
+.active_hr{
+    border-width:1px 0 0 0;
+    border-color: #ffa53f;
+}
+
+.activeComponent{
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
