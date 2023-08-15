@@ -1,13 +1,13 @@
 import React from "react";
 import "./static/Base.css";
-import "./static/Base.css";
+import "./static/Delete.css";
 
 const Delete = () => {
   return (
     <div>
       <div className="info">
         성공적으로 <br /> 취소가 완료되었습니다.
-      </div>{" "}
+      </div>
       <br />
       <div className="delete_content">
         <img src="/images/Delete.png" width="120" height="160" />

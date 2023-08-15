@@ -256,7 +256,11 @@ const Matching = () => {
             <>
               {" "}
               '
-              <button type="submit" className="add" onClick={goToFastMatching}>
+              <button
+                type="submit"
+                className="apply"
+                onClick={goToFastMatching}
+              >
                 {" "}
                 신청 완료
               </button>
@@ -266,7 +270,7 @@ const Matching = () => {
               {" "}
               <button
                 type="submit"
-                className="add"
+                className="apply"
                 onClick={goToProfileMatching}
               >
                 {" "}

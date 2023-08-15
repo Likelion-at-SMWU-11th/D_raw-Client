@@ -1,0 +1,117 @@
+.fastmatching{    
+    width: 340px;
+    height: 220px;
+    border: 1px solid #878181;
+    border-radius: 5px;
+    margin: 5px 0px 0px -30px;   
+    padding: 20px 5px 25px 10px;
+}
+
+.fastmatching_tie{
+    margin: 5px 0px 5px 0px;  
+    padding: 0px 0px 0px 0px;  
+    display: flex;
+    align-items: center; 
+/*     background-color: yellow; */
+}
+
+.fastmatching_title{
+    float: left;
+    color:#878181;
+    background: none;
+    margin: 0px 0px 0px 0px;  
+    font-size: 15px;
+    font-weight: 500;
+/*     background-color: red; */
+}
+
+.fastmatching_content{
+    height: 20px;
+    background: none;
+    color:black;
+    font-size: 15px;   
+    font-weight: 700;
+    margin-left: 0px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+/*     background-color: orange; */
+}
+
+.fastmatching_content_specific{
+    width: 330px;
+    height: 65px;
+    border: 1px solid #878181;
+    background-color: #ECECEC;
+    border-radius: 5px;
+    text-align: center;
+    margin: 15px 0px 10px -5px;  
+    padding: 5px 0px 5px 0px;  
+}
+
+.fastmatching_box_title{
+    float: left;
+    width: 110px;
+    color:#878181;
+    background-color: #ECECEC;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0px 0px 0px 0px;    
+}
+
+.fastmatching_box_content{
+    float: right;
+    width: 110px;
+    color:black;
+    background-color: #ECECEC;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0px 0px 0px 0px;  
+  
+}
+
+
+.fastmatching_button{
+    width: 45px;
+    height: 27px;
+    background-color: white;
+    border: 1px solid  ;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
+.fastmatching_button.clicked{
+    width: 45px;
+    height: 27px;
+    background-color: #F9D1CF;
+    color:#FF971E;
+    border: 1px solid  ;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
+.none-apply{
+    border: none;
+    background-color: #D9D9D9;
+    color: #B3B3B3;
+    display: block;
+    width: 340px;
+    height: 56px;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: 15px;
+    margin-left: -30px;
+}
+
+.checkbox-selected {
+    border: 2px solid orange;
+  }

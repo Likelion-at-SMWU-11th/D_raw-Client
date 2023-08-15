@@ -1,0 +1,30 @@
+.suggestmatching_content{
+    color: black;
+    text-align: center;
+    font-size: 14x;
+    font-weight: 300;
+}
+
+.suggestmatching{
+    padding-top: 200px ;
+    text-align: center;
+}
+
+
+.apply_matching{
+    margin: 220px ;
+    border: none;
+    background-color:#F9D1CF;
+    color:  #FF971E;
+    display: block;
+    width: 340px;
+    height: 50px;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: 15px;
+    margin-left: -30px;
+    border-radius: 5px;
+}
