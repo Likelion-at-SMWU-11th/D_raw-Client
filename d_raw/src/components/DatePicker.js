@@ -21,7 +21,7 @@ const DateContainer = styled.div`
 
 const SDatePicker = styled(DatePicker)`
   margin-top: 1.5rem;
-  width: 200px;
+  width: 150px;
   padding: 8px 20px;
   border-radius: 4px;
   border: 1px solid;
@@ -29,7 +29,7 @@ const SDatePicker = styled(DatePicker)`
 `;
 
 const SelectedDate = styled.div`
-  width: 200px;
+  width: 150px;
   margin-top: 0.5rem;
   display: inline-block;
   padding: 10px;
