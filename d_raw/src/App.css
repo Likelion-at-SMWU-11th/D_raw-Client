@@ -1,5 +1,21 @@
-.App {
+/* src/App.css */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.Title {
+  font-size: 50px;
+  color: white;
   text-align: center;
+}
+
+hr {
+  color: solid gray;
 }
 
 .App-logo {
@@ -7,11 +23,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -27,25 +38,3 @@
 .App-link {
   color: #61dafb;
 }
-
-.textcenter{
-  text-align: center;
-  align-items: center;
-  display: center;
-}
-
-.inbox{
-  display: inline-block;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-
