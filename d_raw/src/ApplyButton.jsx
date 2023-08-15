@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledButton = styled.button`
+    width: 100%;
     padding: 10px 100px;
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.5;
@@ -13,6 +14,7 @@ const StyledButton = styled.button`
     margin: 8px;
     color: white;
     background: #FF971E;
+    white-space: nowrap;
 `;
 
 const ApplyButton = () => {

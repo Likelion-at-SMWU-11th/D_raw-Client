@@ -82,7 +82,7 @@ const ServicePage = () => {
         <br />
         <div style={{ display: "flex", alignItems: "flex-start" }}>
           <Content>날짜</Content>
-          <div style={{ marginLeft: "80px", textAlign: "center" }}>
+          <div style={{ marginLeft: "60px", textAlign: "center" }}>
             <DatePicker onSelect={handleDateSelect} />
           </div>
         </div>
