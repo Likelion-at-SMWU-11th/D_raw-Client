@@ -31,6 +31,25 @@ function App() {
           <Route path="/service2" element={<Service2Page />} />
           <Route path="/service3" element={<Service3Page />} />
           <Route path="/service4" element={<Service4Page />} />
+          <Route path="/kakao" element={<KakaoLogin />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/type" element={<Type />} />
+          <Route path="/type/info" element={<Typeinfo />} />
+          <Route path="/type/info/selectregion" element={<SelectRegion />} />
+          <Route path="/matching_type" element={<Matching />} />
+          <Route path="/matching/fast" element={<FastMatching />} />
+          <Route path="/matching/profile" element={<ProfileMatching />} />
+          <Route path="/matching/helperlist" element={<HelperList />} />
+          <Route
+            path="/matching/helperlist/profile"
+            element={<HelperListProfile />}
+          />
+          <Route path="/matching/delete" element={<Delete />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/edit" element={<MyProfileEdit />} />
+          <Route path="/a" element={<A />} />
+          <Route path="/a/display" element={<DisplayA />} />
+          <Route path="/helpermatching" element={<HelperMatching />} />
         </Routes>
       </div>
     </Router>
