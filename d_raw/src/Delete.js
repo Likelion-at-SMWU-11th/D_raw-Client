@@ -1,6 +1,6 @@
 import React from "react";
 import "./static/Base.css";
-import "./static/Delete.css";
+import "./static/Base.css";
 
 const Delete = () => {
   return (

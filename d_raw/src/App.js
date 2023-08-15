@@ -12,6 +12,22 @@ import ServicePage from "./components/ServicePage";
 import Service2Page from "./components/Service2Page";
 import Service3Page from "./components/Service3Page";
 import Service4Page from "./components/Service4Page";
+import Delete from "./Delete";
+import FastMatching from "./FastMatching";
+import HelperFastMatching from "./HelperFastMatching";
+import HelperList from "./HelperList";
+import HelperListProfile from "./HelperListprofile";
+import HelperMatching from "./HelperMatching";
+import HelperSuggestMatching from "./HelperSuggestMatching";
+import Login from "./Login";
+import Matching from "./Matching";
+import MyProfileEdit from "./MyProfileEdit";
+import Profile from "./Profile";
+import ProfileMatching from "./ProfileMatching";
+import SelectRegion from "./SelectRegion";
+import Type from "./Type";
+import Typeinfo from "./Typeinfo";
+
 import "./App.css";
 
 function App() {
@@ -31,8 +47,7 @@ function App() {
           <Route path="/service2" element={<Service2Page />} />
           <Route path="/service3" element={<Service3Page />} />
           <Route path="/service4" element={<Service4Page />} />
-          <Route path="/kakao" element={<KakaoLogin />} />
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/type" element={<Type />} />
           <Route path="/type/info" element={<Typeinfo />} />
           <Route path="/type/info/selectregion" element={<SelectRegion />} />
@@ -47,8 +62,6 @@ function App() {
           <Route path="/matching/delete" element={<Delete />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/edit" element={<MyProfileEdit />} />
-          <Route path="/a" element={<A />} />
-          <Route path="/a/display" element={<DisplayA />} />
           <Route path="/helpermatching" element={<HelperMatching />} />
         </Routes>
       </div>

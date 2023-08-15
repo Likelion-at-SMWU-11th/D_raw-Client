@@ -11,7 +11,7 @@ const ProfileMatching = () => {
   };
 
   const goToEditPage = () => {
-    navigate("/matching");
+    navigate("/matching_type");
   };
 
   const goToDeletePage = () => {
