@@ -1,30 +1,43 @@
 .box {
     margin-top: 50px;
-    width: 150px;
-    height: 150px; 
+    margin-left: 70px;
     border: 1px solid #D9D9D9;
     border-radius: 70%;
 /*  넘치는 부분 지우기 */
     overflow: hidden;
-
-}
-.profile {
     width: 100%;
     height: 100%;
-/*     이미지와 같은 오브젝트를 받아서 비율은 그대로 유지한 채 이미지 가공 */
-    object-fit: cover; 
+    /* object-fit: fill;  기본값 주어진 너비 높이에 맞게 사이즈 조절해 가로세로 비율 유지되지 않음 */
+    object-fit: cover; /* 가로세로 비율 유지하나 이미지 확대해 컨테이너 다 채움  */
+}
+
+.profile_input {
+    float: right;
+    margin-right: 60px;
+    margin-top: -45px;
+    background: none;
 }
 
 .profile_info{
     margin-top: 50px;
-    color: black;
+    margin-left: -3px;
+    width: 310px;
+    color: black;    
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+}
+
+.profile_info_hr{
+    margin-left: -10px;
+    border: 0.5px solid #D9D9D9;;
+    width: 307px;
 }
 
 .profile_info_title{
+    padding-left: 0 auto;
     height: 63px;
     line-height: 63px;
-    border: 1px solid #D9D9D9;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
 }
 
@@ -32,5 +45,16 @@
     float: right;
     height: 20px;
     font-size: 16px;
+    font-weight: 400;
     color: black;
+}
+
+.GoNextButton{
+    position: fixed;
+    margin-top: 22px;
+    margin-left: 5px;
+}
+
+.submit_profile_position{
+    margin-left: -5.5px;
 }

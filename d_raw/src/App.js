@@ -32,6 +32,7 @@ import ProfileMatching from "./ProfileMatching";
 import SelectRegion from "./SelectRegion";
 import Type from "./Type";
 import Typeinfo from "./Typeinfo";
+import ProfileUploader from "./ProfileUploader";
 
 import "./App.css";
 
@@ -73,6 +74,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/edit" element={<MyProfileEdit />} />
           <Route path="/helpermatching" element={<HelperMatching />} />
+          <Route path="/profilephoto" element={<ProfileUploader />} />
         </Routes>
       </div>
     </Router>
