@@ -26,7 +26,6 @@ import HelperMatching from "./HelperMatching";
 import HelperSuggestMatching from "./HelperSuggestMatching";
 import Login from "./Login";
 import Matching from "./Matching";
-import MyProfileEdit from "./MyProfileEdit";
 import Profile from "./Profile";
 import ProfileMatching from "./ProfileMatching";
 import SelectRegion from "./SelectRegion";
@@ -34,7 +33,6 @@ import Type from "./Type";
 import Typeinfo from "./Typeinfo";
 import EditCareer from "./EditCareer";
 import StartDate from "./StartDate";
-import ProfileUploader from "./ProfileUploader";
 
 import "./App.css";
 
