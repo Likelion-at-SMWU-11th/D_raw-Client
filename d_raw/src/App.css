@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 body{
+=======
+<<<<<<< HEAD
+=======
+/* src/App.css */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+>>>>>>> 7ab6a9b8b9ebfeffe9bee986fbc5806a85174ef2
   background-color: rgb(203, 224, 251);
 }
 

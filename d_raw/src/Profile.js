@@ -16,14 +16,6 @@ const Profile = () => {
       </div>
       <div className="profile_info">
         <div className="profile_info_title">
-          성별
-          <div className="profile_info_content">여성</div>
-        </div>
-        <div className="profile_info_title">
-          나이
-          <div className="profile_info_content">23세</div>
-        </div>
-        <div className="profile_info_title">
           총 봉사 경력
           <div className="profile_info_content">1년</div>
         </div>
