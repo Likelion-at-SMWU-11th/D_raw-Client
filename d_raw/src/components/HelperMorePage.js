@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./UserFooter";
 
 const MoreContainer = styled.div`
   display: flex;
@@ -20,6 +20,8 @@ const LeftAlignedHeading = styled.div`
 `;
 
 const Heading = styled.h3`
+  margin-left: 30px;
+  margin-top: 10px;
   font-weight: bold;
 `;
 const BoxContainer = styled.div`
@@ -28,7 +30,15 @@ const BoxContainer = styled.div`
   gap: 10px;
 `;
 
+const Describe = styled.h4`
+  margin-left: -30px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+`;
+
 const Box = styled.div`
+  margin-left: -50px;
+  width: 362px;
   border: 2px solid #ccc;
   padding: 10px;
   background: #e6e6e6;
@@ -38,7 +48,7 @@ const Box = styled.div`
   text-align: left;
 `;
 
-const MorePage = () => {
+const HelperMorePage = () => {
   return (
     <MoreContainer>
       <LeftAlignedHeading>
@@ -50,23 +60,28 @@ const MorePage = () => {
         <BoxContainer>
           <Box>설정</Box>
         </BoxContainer>
-        <Link to="/account">계정</Link>
-        <hr />
-        <p>앱 알림</p>
+        <Describe>
+          <Link to="/helperaccount">계정</Link>
+          <hr />
+          <p>앱 알림</p>
+        </Describe>
         <BoxContainer>
           <Box>서비스 이용</Box>
         </BoxContainer>
-        <p>D:raw 서비스 이용내역</p>
+        <Describe>
+          <p align="left">D:raw 서비스 이용내역</p>
+        </Describe>
         <BoxContainer>
           <Box>고객센터</Box>
         </BoxContainer>
-        <Link to="/notice">공지사항</Link>
-        <hr />
-        <Link to="/question">자주 묻는 질문</Link>
-        <hr />
-        <p>1:1 채팅 상담</p>
-        <p>평일 09:00~18:00, 점심시간 13:00~14:00</p>
-        <br />
+        <Describe>
+          <Link to="/notice">공지사항</Link>
+          <hr />
+          <Link to="/question">자주 묻는 질문</Link>
+          <hr />
+          <p>1:1 채팅 상담</p>
+          <p>평일 09:00~18:00, 점심시간 13:00~14:00</p>
+        </Describe>
         <BoxContainer>
           <Box>
             <h4>D:raw 고객센터 1588-1588</h4>
@@ -75,10 +90,11 @@ const MorePage = () => {
             <p>사업자정보확인 | 이용약관 | 개인정보처리방침</p>
           </Box>
         </BoxContainer>
+        <br />
         <Footer />
       </LeftAlignedHeading>
     </MoreContainer>
   );
 };
 
-export default MorePage;
+export default HelperMorePage;

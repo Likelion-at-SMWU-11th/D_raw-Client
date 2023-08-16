@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const ComplimentContainer = styled.div`
+const VolunteerlogContainer = styled.div`
   text-align: center;
   width: 362px;
   height: 800px;
@@ -10,17 +10,29 @@ const ComplimentContainer = styled.div`
 `;
 
 const Heading = styled.h3`
+  margin-top: 5px;
+  margin-left: -15px;
   font-weight: bold;
 `;
 
+const Describe = styled.div`
+  margin-left: -10px;
+  margin-top: -25px;
+  margin-bottom: -20px;
+  white-space: nowrap;
+`;
+
 const CompImage = styled.img`
-  width: 100px;
-  height: 100px;
+  margin-left: -10px;
+  margin-top: 5px;
+  width: 120px;
+  height: 120px;
 `;
 
 const Textarea = styled.textarea`
+  margin-left: -20px;
   padding: 40px;
-  width: 280px;
+  width: 250px;
   height: 100px;
   white-space: 280px;
 `;
@@ -31,6 +43,7 @@ const CharCount = styled.span`
 
 const PhotoButton = styled.button`
   padding: 10px 65px;
+  margin-left: -20px;
   border-radius: 6px;
   text-align: center;
   font-size: 1rem;
@@ -43,7 +56,9 @@ const PhotoButton = styled.button`
 `;
 
 const StampButton = styled.button`
-  padding: 10px 110px;
+  padding: 10px 120px;
+  margin-left: -20px;
+  margin-top: -7px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -54,7 +69,7 @@ const StampButton = styled.button`
   white-space: nowrap;
 `;
 
-const ComplimentPage = () => {
+const Volunteerlog = () => {
   const [reviewText, setReviewText] = useState("");
 
   const handleReviewChange = (event) => {
@@ -63,47 +78,52 @@ const ComplimentPage = () => {
   };
 
   return (
-    <ComplimentContainer>
+    <VolunteerlogContainer>
       <Heading>
-        <button>뒤로</button>칭찬 도장
+        봉사 일지
+        <hr />
       </Heading>
-      <hr />
       <br />
-      <div style={{ display: "flex", alignItems: "flex-start" }}>
-        <CompImage src="song.png" alt="song" />
-        <div style={{ marginLeft: "10px", textAlign: "left" }}>
-          <h3>
-            <strong>김눈* 안내사</strong>
-          </h3>
-          <p>봉사 일시: 23. 08. 18(금)</p>
-          <p>오후 1시~3시</p>
+      <Describe>
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
+          <CompImage src="song.png" alt="song" />
+          <div style={{ marginLeft: "10px", textAlign: "left" }}>
+            <h3>
+              <strong>김눈* 안내사</strong>
+            </h3>
+            <p>봉사 일시: 23. 08. 18(금)</p>
+            <p>오후 1시~3시</p>
+          </div>
         </div>
-      </div>
+      </Describe>
       <br />
       <hr />
-      <h3 align="left">자세한 리뷰를 작성해주세요</h3>
+      <h3 align="left">정확한 봉사 내용을 입력해주세요</h3>
       <p align="left">
-        친절함/성실도/도움 여부 등에 대한 경험을 <br />
+        안내한 서비스 종류 / 안내 내용 등을
+        <br />
         적어주세요
       </p>
       <Textarea
         value={reviewText}
         onChange={handleReviewChange}
         maxLength="300"
-        placeholder="디지털 약자분들이 더 나은 서비스를 받을 수 있도록 구체적으로 적어주세요"
+        placeholder="봉사 시간을 받기 위해서는 보다 구체적인 내용이
+        필요합니다. 활동 내용을 정확하게 적어주세요."
       ></Textarea>
       <CharCount>({reviewText.length}/300)</CharCount>
       <br />
       <PhotoButton>📷 사진 첨부하기 (선택) </PhotoButton>
       <br />
       <p align="left">
-        * 안내사 매칭 경험과 관련없거나 부적절한 리뷰는 삭제 조치되니
-        유의해주세요.
+        * 봉사 일지 작성 조건을 충족하지 못 할 경우(안내한 서비 스 종류/안내
+        내용 미포함), 봉사 시간 입력이 보류됨을 유의해주세요
       </p>
       <br />
-      <StampButton>도장 지급</StampButton>
-    </ComplimentContainer>
+      <br />
+      <StampButton>제출하기</StampButton>
+    </VolunteerlogContainer>
   );
 };
 
-export default ComplimentPage;
+export default Volunteerlog;
