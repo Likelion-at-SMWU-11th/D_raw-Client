@@ -6,9 +6,24 @@ import "./static/Profile.css";
 
 const Profile = () => {
   const navigate = useNavigate();
-  const goToProfileEditPage = () => {
-    navigate("/profile/edit");
+
+  const onBack = () => {
+    navigate(-1);
   };
+
+  const goToEditCareer = () => {
+    navigate("/profile/edit/career");
+  };
+
+  const goToStartDate = () => {
+    navigate("/profile/edit/date");
+  };
+
+  /*   const goToReview = () => {
+    navigate("리뷰페이지");
+  }; */
+
+  /*   프로필 사진 구현 */
 
   const [previewImage, setPreviewImage] = useState(
     "/images/default_profile.png"
@@ -46,7 +61,17 @@ const Profile = () => {
 
   return (
     <div>
-      <header>내 프로필 수정</header>
+      <header>
+        {" "}
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        내 프로필 수정
+      </header>
       <div>
         {/*       <img class="profile" src="" />
         <br /> */}
@@ -80,11 +105,11 @@ const Profile = () => {
         <div className="profile_info_title">
           총 봉사 경력
           <div className="profile_info_content">
-            1년{" "}
+            1년 &nbsp;
             <img
               src="/images/next.png"
               className="GoNextButton"
-              /*           onClick={editcareer} */
+              onClick={goToEditCareer}
               width="20"
               height="20"
             />
@@ -95,11 +120,11 @@ const Profile = () => {
           D:raw 활동 시작 일자
           <div className="profile_info_content">
             {" "}
-            3년 8개월{" "}
+            3년 8개월 &nbsp;
             <img
               src="/images/next.png"
               className="GoNextButton"
-              /*           onClick={editcareer} */
+              onClick={goToStartDate}
               width="20"
               height="20"
             />
@@ -112,7 +137,7 @@ const Profile = () => {
             <img
               src="/images/next.png"
               className="GoNextButton"
-              /*           onClick={editcareer} */
+              /*               onClick={goToReview} */
               width="20"
               height="20"
             />

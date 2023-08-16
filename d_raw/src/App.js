@@ -32,6 +32,8 @@ import ProfileMatching from "./ProfileMatching";
 import SelectRegion from "./SelectRegion";
 import Type from "./Type";
 import Typeinfo from "./Typeinfo";
+import EditCareer from "./EditCareer";
+import StartDate from "./StartDate";
 import ProfileUploader from "./ProfileUploader";
 
 import "./App.css";
@@ -71,10 +73,10 @@ function App() {
             element={<HelperListProfile />}
           />
           <Route path="/match/delete" element={<Delete />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/profile/edit" element={<MyProfileEdit />} />
+          <Route path="/profile/edit" element={<Profile />} />
+          <Route path="/profile/edit/career" element={<EditCareer />} />
+          <Route path="/profile/edit/date" element={<StartDate />} />
           <Route path="/helpermatching" element={<HelperMatching />} />
-          <Route path="/profilephoto" element={<ProfileUploader />} />
         </Routes>
       </div>
     </Router>

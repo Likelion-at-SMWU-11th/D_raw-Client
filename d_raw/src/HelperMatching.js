@@ -32,7 +32,6 @@ const HelperMatching = () => {
         매칭 찾기
       </header>
       <hr />
-      <br />
       <div className="helper_findingMatching">
         <div className="helper_matching">
           <button
