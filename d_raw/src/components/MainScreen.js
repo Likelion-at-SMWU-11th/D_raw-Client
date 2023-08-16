@@ -5,6 +5,7 @@ import ApplyButton from "../ApplyButton";
 import Footer from "./Footer";
 
 const MainContainer = styled.div`
+  margin-left: -60px;
   display: flex;
   flex-direction: column;
   width: 362px;

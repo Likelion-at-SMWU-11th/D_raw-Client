@@ -30,7 +30,7 @@ const CharCount = styled.span`
 `;
 
 const PhotoButton = styled.button`
-  padding: 10px 93px;
+  padding: 10px 65px;
   border-radius: 6px;
   text-align: center;
   font-size: 1rem;
@@ -43,7 +43,7 @@ const PhotoButton = styled.button`
 `;
 
 const StampButton = styled.button`
-  padding: 10px 150px;
+  padding: 10px 110px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -100,8 +100,6 @@ const ComplimentPage = () => {
         * 안내사 매칭 경험과 관련없거나 부적절한 리뷰는 삭제 조치되니
         유의해주세요.
       </p>
-      <br />
-      <br />
       <br />
       <StampButton>도장 지급</StampButton>
     </ComplimentContainer>

@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
+  margin-left: -40px;
+  width: 362px;
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
   height: 80px;
   background-color: white;
+  white-space: nowrap;
 `;
 
 const IconWithText = ({ imageSrc, text, size }) => {

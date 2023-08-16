@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-.body{
-    width: 362px;
-    height: 800px;
-    display: flex;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: aliceblue;
-}
-=======
->>>>>>> c86e84e4bdee14e8e860e7eb32d187c5dc668b08
-
-.header{
+header{
     padding-top: 10px;
     width: 330px;
     display: center;
@@ -20,7 +8,7 @@
     font-weight: bold;
 }
 
-.div {
+div {
     position: relative;
     max-width: 362px;
     max-height: 800px;

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-/* src/App.css */
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: rgb(255, 255, 255);
+body{
+  background-color: rgb(203, 224, 251);
 }
 
->>>>>>> c86e84e4bdee14e8e860e7eb32d187c5dc668b08
-.Title {
+Title {
   font-size: 50px;
   color: white;
   text-align: center;
@@ -39,8 +31,4 @@ hr {
 
 .App-link {
   color: #61dafb;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c86e84e4bdee14e8e860e7eb32d187c5dc668b08
