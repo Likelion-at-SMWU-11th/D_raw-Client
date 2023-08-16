@@ -1,6 +1,7 @@
 .helper_findingMatching{
     display: flex;
     align-items: center;
+        margin-left: -10px;
 }
 
 .helper_matching{
@@ -29,7 +30,13 @@
     
 }
 
+.helper_matching_hr{
+    width: 150px;
+    border-width:1px 0 0 0;
+}
+
 .active_hr{
+    width: 150px;
     border-width:1px 0 0 0;
     border-color: #ffa53f;
 }
@@ -39,4 +46,14 @@
     padding-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
+}
+
+
+.GoBackButton{
+    width: 20;
+    height: 20;
+    float: left;
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-right: -10px;
 }

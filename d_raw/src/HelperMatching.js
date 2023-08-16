@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import HelperFastMatching from "./HelperFastMatching";
 import HelperSuggestMatching from "./HelperSuggestMatching";
+import HelperSuggestMatching_content from "./HelperSuggestMatching_content";
 import "./static/Base.css";
 import "./static/HelperMatching.css";
 
 const HelperMatching = () => {
+  const navigate = useNavigate();
+  const onBack = () => {
+    navigate(-1);
+  };
+
   const [activeComponent, setActiveComponent] = useState(null);
 
   const handleComponentClick = (componentName) => {
@@ -13,7 +21,16 @@ const HelperMatching = () => {
 
   return (
     <div>
-      <header>매칭 찾기</header>
+      <header>
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        매칭 찾기
+      </header>
       <hr />
       <br />
       <div className="helper_findingMatching">
@@ -54,7 +71,8 @@ const HelperMatching = () => {
       </div>
       <div className="activeComponent">
         {activeComponent === "A" && <HelperFastMatching />}
-        {activeComponent === "B" && <HelperSuggestMatching />}
+        {/*         {activeComponent === "B" && <HelperSuggestMatching />} */}
+        {activeComponent === "B" && <HelperSuggestMatching_content />}
       </div>
     </div>
   );

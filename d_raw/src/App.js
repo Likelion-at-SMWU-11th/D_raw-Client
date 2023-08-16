@@ -51,15 +51,15 @@ function App() {
           <Route path="/type" element={<Type />} />
           <Route path="/type/info" element={<Typeinfo />} />
           <Route path="/type/info/selectregion" element={<SelectRegion />} />
-          <Route path="/matching_type" element={<Matching />} />
-          <Route path="/matching/fast" element={<FastMatching />} />
-          <Route path="/matching/profile" element={<ProfileMatching />} />
-          <Route path="/matching/helperlist" element={<HelperList />} />
+          <Route path="/match_type" element={<Matching />} />
+          <Route path="/match/quick" element={<FastMatching />} />
+          <Route path="/match/profile" element={<ProfileMatching />} />
+          <Route path="/match/helperlist" element={<HelperList />} />
           <Route
             path="/matching/helperlist/profile"
             element={<HelperListProfile />}
           />
-          <Route path="/matching/delete" element={<Delete />} />
+          <Route path="/match/delete" element={<Delete />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/edit" element={<MyProfileEdit />} />
           <Route path="/helpermatching" element={<HelperMatching />} />

@@ -27,10 +27,11 @@ const HelperSuggestMatching = () => {
       </span>
       <br />
       <span className="suggestmatching_content">
-        기다리는 동안 빠른 매칭에 지원해 보시겠어요?
+        기다리는 동안 빠른 매칭에서 지원해 주세요!
       </span>
       <br />
-      <button className="apply_matching">매칭 지원하기</button>
+      {/*       <button className="apply_matching">매칭 지원하기</button>
+       */}{" "}
     </div>
   );
 };

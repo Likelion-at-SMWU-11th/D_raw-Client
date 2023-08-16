@@ -1,14 +1,14 @@
 .fastmatching{    
     width: 340px;
-    height: 220px;
+    height: 275px;
     border: 1px solid #878181;
     border-radius: 5px;
-    margin: 5px 0px 0px -30px;   
+    margin: 15px 0px 0px -30px;   
     padding: 20px 5px 25px 10px;
 }
 
 .fastmatching_tie{
-    margin: 5px 0px 5px 0px;  
+    margin: 12px 0px 15px 0px;  
     padding: 0px 0px 0px 0px;  
     display: flex;
     align-items: center; 
@@ -40,12 +40,12 @@
 
 .fastmatching_content_specific{
     width: 330px;
-    height: 65px;
+    height: 80px;
     border: 1px solid #878181;
     background-color: #ECECEC;
     border-radius: 5px;
     text-align: center;
-    margin: 15px 0px 10px -5px;  
+    margin: 20px 0px 15px -5px;  
     padding: 5px 0px 5px 0px;  
 }
 
@@ -110,8 +110,30 @@
     font-weight: 900;
     font-size: 15px;
     margin-left: -30px;
+    
+
+/*     width: 305px;
+    height: 56px;
+
+
+    margin-left: -10px;
+    margin-right: 30px; */
+
+/*     하단에 위치시키기 */
+    position: fixed;
+    bottom: 80px;
 }
 
 .checkbox-selected {
     border: 2px solid orange;
   }
+
+.matching_radio{
+    position:absolute;
+    opacity: 0;
+    width: 0;
+}
+
+.fastmatching_radio{
+    margin-right: 5px;
+}

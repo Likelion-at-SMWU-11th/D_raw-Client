@@ -94,7 +94,17 @@ const SelectRegion = () => {
         ))}  */}
         <br />
         <br />
-        <button type="submit" className="apply" onClick={goToMain}>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <button type="apply" className="apply" onClick={goToMain}>
           적용하기
         </button>
       </form>

@@ -1,5 +1,5 @@
 #wrapper {
-    width: 151px;
+    width: 141px;
     text-align: center;
     margin: 10px 5px 15px 5px;
     border: 1px solid grey;
@@ -10,16 +10,17 @@
 
 .textarea{
     margin: 10px auto;
-    width: 315px;
+    width: 290px;
     height: 35px;
     font-size: 15px;
 }
 
 .numarea{
     margin: 10px auto;
-    width: 280px;
+    width: 160px;
     height: 35px;
     font-size: 15px;
+    text-align: center;
 }
 
 .add{
@@ -27,7 +28,7 @@
     display: block;
     background-color: white;
     border: 1px solid grey;
-    width: 320px;
+    width: 290px;
     height: 40px;
     margin: 10px auto;
     float: center;
