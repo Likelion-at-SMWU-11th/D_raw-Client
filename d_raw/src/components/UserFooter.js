@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
-  margin-left: -40px;
+  margin-top: 7px;
+  margin-left: -45px;
   width: 362px;
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  height: 80px;
+  height: 75px;
   background-color: white;
   white-space: nowrap;
 `;
@@ -39,7 +40,7 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <Link to="/main">
+      <Link to="/usermain">
         <IconWithText
           imageSrc={icons[0].imageSrc}
           text={icons[0].text}
@@ -48,7 +49,7 @@ const Footer = () => {
       </Link>
 
       {/* '내 매칭', '상담하기', '더보기' 아이콘은 Link를 통해 각각의 페이지로 이동하도록 설정합니다 */}
-      <Link to="/matching">
+      <Link to="/usermymatching">
         <IconWithText
           imageSrc={icons[1].imageSrc}
           text={icons[1].text}
@@ -69,7 +70,7 @@ const Footer = () => {
           size={icons[3].size}
         />
       </Link>
-      <Link to="/more">
+      <Link to="/usermore">
         <IconWithText
           imageSrc={icons[4].imageSrc}
           text={icons[4].text}

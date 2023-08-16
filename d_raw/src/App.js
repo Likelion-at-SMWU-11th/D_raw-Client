@@ -1,11 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomeScreen from "./components/HomeScreen";
-import MainScreen from "./components/MainScreen";
-import MatchingPage from "./components/MatchingPage";
+import UserMainPage from "./components/UserMainPage";
+import HelperMainPage from "./components/HelperMainPage";
+import UserMyMatching from "./components/UserMyMatching";
+import HelperMyMatching from "./components/HelperMyMatching";
 import ComplimentPage from "./components/ComplimentPage";
-import MorePage from "./components/MorePage";
-import AccountPage from "./components/AccountPage";
+import Volunteerlog from "./components/Volunteerlog";
+import UserMorePage from "./components/UserMorePage";
+import HelperMorePage from "./components/HelperMorePage";
+import UserAccount from "./components/UserAccount";
+import HelperAccount from "./components/HelperAccount";
 import NoticePage from "./components/NoticePage";
 import QuestionPage from "./components/QuestionPage";
 import ServicePage from "./components/ServicePage";
@@ -36,11 +41,16 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/main" element={<MainScreen />} />
-          <Route path="/matching" element={<MatchingPage />} />
+          <Route path="/usermain" element={<UserMainPage />} />
+          <Route path="/helpermain" element={<HelperMainPage />} />
+          <Route path="/usermymatching" element={<UserMyMatching />} />
+          <Route path="/helpermymatching" element={<HelperMyMatching />} />
           <Route path="/compliment" element={<ComplimentPage />} />
-          <Route path="/more" element={<MorePage />} />
-          <Route path="/account" element={<AccountPage />} />
+          <Route path="/volunteerlog" element={<Volunteerlog />} />
+          <Route path="/usermore" element={<UserMorePage />} />
+          <Route path="/helpermore" element={<HelperMorePage />} />
+          <Route path="/useraccount" element={<UserAccount />} />
+          <Route path="helperaccount" element={<HelperAccount />} />
           <Route path="/notice" element={<NoticePage />} />
           <Route path="/question" element={<QuestionPage />} />
           <Route path="/service" element={<ServicePage />} />

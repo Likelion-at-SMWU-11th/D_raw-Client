@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import ApplyButton from "../ApplyButton";
-import Footer from "./Footer";
+import HelperFooter from "./HelperFooter";
 
 const MainContainer = styled.div`
-  margin-left: -60px;
   display: flex;
   flex-direction: column;
   width: 362px;
@@ -15,6 +14,7 @@ const MainContainer = styled.div`
 `;
 
 const MainImage = styled.img`
+  margin-left: -15px;
   width: 70px;
   height: 70px;
 `;
@@ -22,32 +22,28 @@ const MainImage = styled.img`
 const LeftAlignedHeading = styled.div`
   font-weight: bold;
   text-align: left;
-  margin: 5px;
+  margin-left: -5px;
+  margin-top: -25px;
   padding: 5px;
 `;
 
-const LogoWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
-const MainScreen = () => {
+const HelperMain = () => {
   return (
     <MainContainer>
-      <LogoWrapper>
-        <Logo />
-      </LogoWrapper>
+      <Logo />
       <ApplyButton />
+      <hr />
       <LeftAlignedHeading>
         <h3>우수 D:raw 안내사</h3>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
           <MainImage src="song.png" alt="song" />
           <div style={{ marginLeft: "10px", textAlign: "center" }}>
             <p>
-              1. 김눈*
-              <br />
-              🏅(75)
+              <strong>
+                1. 김눈*
+                <br />
+                🏅(75)
+              </strong>
             </p>
           </div>
         </div>
@@ -55,9 +51,11 @@ const MainScreen = () => {
           <MainImage src="wade.png" alt="wade" />
           <div style={{ marginLeft: "10px", textAlign: "center" }}>
             <p>
-              2. 웨이*
-              <br />
-              🏅(61)
+              <strong>
+                2. 웨이*
+                <br />
+                🏅(61)
+              </strong>
             </p>
           </div>
         </div>
@@ -65,9 +63,11 @@ const MainScreen = () => {
           <MainImage src="lion.png" alt="lion" />
           <div style={{ marginLeft: "10px", textAlign: "center" }}>
             <p>
-              3.김사*
-              <br />
-              🏅(45)
+              <strong>
+                3.김사*
+                <br />
+                🏅(45)
+              </strong>
             </p>
           </div>
         </div>
@@ -75,18 +75,19 @@ const MainScreen = () => {
           <MainImage src="dog.png" alt="dog" />
           <div style={{ marginLeft: "10px", textAlign: "center" }}>
             <p>
-              4. 이댕*
-              <br />
-              🏅(41)
+              <strong>
+                4. 이댕*
+                <br />
+                🏅(41)
+              </strong>
             </p>
           </div>
         </div>
-        <br />
         <hr />
-        <Footer />
+        <HelperFooter />
       </LeftAlignedHeading>
     </MainContainer>
   );
 };
 
-export default MainScreen;
+export default HelperMain;

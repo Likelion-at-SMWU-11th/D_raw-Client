@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./UserFooter";
 
 const MatchingContainer = styled.div`
   text-align: center;
@@ -12,12 +12,22 @@ const MatchingContainer = styled.div`
 `;
 
 const Heading = styled.h3`
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: -20px;
   font-weight: bold;
+`;
+
+const Name = styled.h2`
+  color: #ff971e;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: -10px;
 `;
 
 const BoxContainer = styled.div`
   margin-left: -40px;
-  width: 362px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -26,7 +36,9 @@ const BoxContainer = styled.div`
 
 const Box = styled.div`
   border: 2px solid #ccc;
-  padding: 15px;
+  margin-left: 7px;
+  width: 350px;
+  padding: 6px;
   hite-space: nowrap;
   flex-direction: column;
 `;
@@ -55,11 +67,12 @@ const MatchingButton = styled.button`
 `;
 
 const Image = styled.img`
+  margin-top: 15px;
   width: 100px;
   height: 100px;
 `;
 
-const MatchingPage = () => {
+const UserMyMatching = () => {
   const navigate = useNavigate();
 
   const handleContinueClick = () => {
@@ -68,15 +81,17 @@ const MatchingPage = () => {
 
   return (
     <MatchingContainer>
-      <Heading>매칭 내역</Heading>
-      <hr />
+      <Heading>
+        매칭 내역
+        <hr />
+      </Heading>
       <BoxContainer>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
             <Image src="who.png" alt="who" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
-              <h4>D:raw</h4>
-              <h3>💬 매칭 중</h3>
+              <Name>D:raw</Name>
+              <h2>💬 매칭 중</h2>
               <p>2023.08.29(화) 오후 4시~5시</p>
             </div>
           </div>
@@ -86,8 +101,8 @@ const MatchingPage = () => {
           <div style={{ display: "flex", alignItems: "flex-start" }}>
             <Image src="song.png" alt="song" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
-              <h4>D:raw</h4>
-              <h3>✔ 이용 예정</h3>
+              <Name>D:raw</Name>
+              <h2>✔ 이용 예정</h2>
               <p>2023.08.25(금) 오후 1시~3시</p>
             </div>
           </div>
@@ -97,8 +112,8 @@ const MatchingPage = () => {
           <div style={{ display: "flex", alignItems: "flex-start" }}>
             <Image src="lion.png" alt="lion" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
-              <h4>D:raw</h4>
-              <h3>✔ 이용 완료</h3>
+              <Name>D:raw</Name>
+              <h2>✔ 이용 완료</h2>
               <p>2023.08.18(금) 오후 1시~3시</p>
             </div>
           </div>
@@ -113,4 +128,4 @@ const MatchingPage = () => {
   );
 };
 
-export default MatchingPage;
+export default UserMyMatching;
