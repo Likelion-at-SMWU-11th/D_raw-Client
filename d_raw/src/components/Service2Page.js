@@ -1,25 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
-const BackButton = styled(Link)`
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 9999; /* Ensure it's above other content */
-`;
-
-const BackIcon = styled.span`
-  font-size: 24px;
-`;
+import { Link, useNavigate } from "react-router-dom";
 
 const Service2Container = styled.div`
   text-align: center;
@@ -32,6 +13,7 @@ const Service2Container = styled.div`
 
 const Heading = styled.h3`
   font-weight: bold;
+  margin-left: -20px;
 `;
 
 const Title = styled.h3`
@@ -47,10 +29,12 @@ const Describe = styled.p`
 const Image = styled.img`
   width: 100%;
   height: 23px;
+  margin-left: -20px;
 `;
 
 const NextButton = styled.button`
-  padding: 10px 160px;
+  padding: 10px 140px;
+  margin-left: -20px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -63,7 +47,7 @@ const NextButton = styled.button`
 `;
 
 const InputField = styled.input`
-  width: 100%;
+  width: 85%;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #ccc;
@@ -75,6 +59,12 @@ const AddressInput = styled(InputField)`
 `;
 
 const Service2Page = () => {
+  const navigate = useNavigate();
+
+  const onBack = () => {
+    navigate(-1);
+  };
+
   const [addressInput, setAddressInput] = useState(""); // 사용자 입력을 관리할 상태
   const [detailAddressInput, setDetailAddressInput] = useState(""); // 상세 주소 입력을 관리할 상태
 
@@ -88,10 +78,16 @@ const Service2Page = () => {
 
   return (
     <Service2Container>
-      <BackButton to="/service">
-        <BackIcon>&lt;</BackIcon>
-      </BackButton>
-      <Heading>매칭 신청</Heading>
+      <Heading>
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        매칭 신청
+      </Heading>
       <hr />
       <Image src="step2.png" alt="step2" />
       <Title>
@@ -113,6 +109,7 @@ const Service2Page = () => {
           onChange={handleDetailAddressChange}
         />
       </Describe>
+      <br />
       <div align="left">
         <p>
           <strong>🔸건물명</strong>

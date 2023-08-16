@@ -1,13 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import Footer from "./UserFooter";
+import { Link } from "react-router-dom";
+
+const BackButton = styled(Link)`
+  position: absolute;
+  margin-top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999; /* Ensure it's above other content */
+`;
+
+const BackIcon = styled.span`
+  font-size: 24px;
+`;
 
 const AccountContainer = styled.div`
   text-align: center;
   width: 362px;
   height: 800px;
   background-color: white;
-  padding: 15px;
+  padding: 10px;
 `;
 
 const Heading = styled.h3`
@@ -24,9 +44,17 @@ const SpacedText = styled.div`
   white-space: nowrap;
 `;
 
+const Part = styled.div`
+  margin-left: 10px;
+  margin-top: 13px;
+`;
+
 const UserAccount = () => {
   return (
     <AccountContainer>
+      <BackButton to="/usermore">
+        <BackIcon>&lt;</BackIcon>
+      </BackButton>
       <Heading>계정 설정</Heading>
       <hr />
       <SpacedText align="left">기본정보</SpacedText>
@@ -90,7 +118,9 @@ const UserAccount = () => {
       <br />
       <br />
       <hr />
-      <Footer />
+      <Part>
+        <Footer />
+      </Part>
     </AccountContainer>
   );
 };

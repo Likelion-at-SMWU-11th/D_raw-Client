@@ -110,7 +110,7 @@ const UserMyMatching = () => {
         </Box>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="lion.png" alt="lion" />
+            <Image src="lion.jpg" alt="lion" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>✔ 이용 완료</h2>

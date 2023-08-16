@@ -37,7 +37,13 @@ const MainScreen = () => {
         <h3>우수 D:raw 안내사</h3>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
           <MainImage src="song.png" alt="song" />
-          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+          <div
+            style={{
+              marginLeft: "10px",
+              marginTop: "-5px",
+              textAlign: "center",
+            }}
+          >
             <p>
               <strong>
                 1. 김눈*
@@ -48,8 +54,14 @@ const MainScreen = () => {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="wade.png" alt="wade" />
-          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+          <MainImage src="wade.jpg" alt="wade" />
+          <div
+            style={{
+              marginLeft: "10px",
+              marginTop: "-5px",
+              textAlign: "center",
+            }}
+          >
             <p>
               <strong>
                 2. 웨이*
@@ -60,8 +72,14 @@ const MainScreen = () => {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="lion.png" alt="lion" />
-          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+          <MainImage src="lion.jpg" alt="lion" />
+          <div
+            style={{
+              marginLeft: "10px",
+              marginTop: "-5px",
+              textAlign: "center",
+            }}
+          >
             <p>
               <strong>
                 3.김사*
@@ -72,8 +90,14 @@ const MainScreen = () => {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="dog.png" alt="dog" />
-          <div style={{ marginLeft: "10px", textAlign: "center" }}>
+          <MainImage src="dog.jpg" alt="dog" />
+          <div
+            style={{
+              marginLeft: "10px",
+              marginTop: "-5px",
+              textAlign: "center",
+            }}
+          >
             <p>
               <strong>
                 4. 이댕*

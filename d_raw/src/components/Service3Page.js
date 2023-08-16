@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Service3Container = styled.div`
   text-align: center;
@@ -13,6 +13,7 @@ const Service3Container = styled.div`
 
 const Heading = styled.h3`
   font-weight: bold;
+  margin-left: -20px;
 `;
 
 const Title = styled.h3`
@@ -23,10 +24,12 @@ const Title = styled.h3`
 const Image = styled.img`
   width: 100%;
   height: 23px;
+  margin-left: -20px;
 `;
 
 const NextButton = styled.button`
-  padding: 10px 160px;
+  padding: 10px 140px;
+  margin-left: -20px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -41,10 +44,12 @@ const NextButton = styled.button`
 const ScrollableNumberPicker = styled.select`
   width: 80px;
   font-size: 16px;
+  padding: 5px;
 `;
 
 const YearLabel = styled.span`
   margin-left: 5px;
+  color: black;
 `;
 
 const RadioButtonContainer = styled.div`
@@ -57,6 +62,12 @@ const RadioButton = styled.input`
 `;
 
 const Service3Page = () => {
+  const navigate = useNavigate();
+
+  const onBack = () => {
+    navigate(-1);
+  };
+
   const [selectedBirthYear, setSelectedBirthYear] = useState(2023);
   const [selectedVisualImpairment, setSelectedVisualImpairment] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
@@ -77,7 +88,16 @@ const Service3Page = () => {
 
   return (
     <Service3Container>
-      <Heading>매칭 신청</Heading>
+      <Heading>
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        매칭 신청
+      </Heading>
       <hr />
       <Image src="step3.png" alt="step3" />
       <Title>

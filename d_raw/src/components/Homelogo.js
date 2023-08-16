@@ -5,7 +5,7 @@ import logoImage from "../assets/homelogo.png"; // 로고 이미지 파일 경�
 const LogoImage = styled.img`
   width: 362px; // 로고 이미지의 크기를 조정
   height: auto; // 가로 세로 비율 유지
-  margin: 0px;
+  margin-top: 225px;
 `;
 
 const Homelogo = () => {

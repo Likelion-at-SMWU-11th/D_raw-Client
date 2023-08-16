@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const ComplimentContainer = styled.div`
@@ -11,6 +12,7 @@ const ComplimentContainer = styled.div`
 
 const Heading = styled.h3`
   font-weight: bold;
+  margin-left: -15px;
 `;
 
 const CompImage = styled.img`
@@ -20,7 +22,8 @@ const CompImage = styled.img`
 
 const Textarea = styled.textarea`
   padding: 40px;
-  width: 280px;
+  width: 220px;
+  margin-left: -15px;
   height: 100px;
   white-space: 280px;
 `;
@@ -32,6 +35,7 @@ const CharCount = styled.span`
 const PhotoButton = styled.button`
   padding: 10px 65px;
   border-radius: 6px;
+  margin-left: -15px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -44,6 +48,7 @@ const PhotoButton = styled.button`
 
 const StampButton = styled.button`
   padding: 10px 110px;
+  margin-left: -15px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -55,6 +60,12 @@ const StampButton = styled.button`
 `;
 
 const ComplimentPage = () => {
+  const navigate = useNavigate();
+
+  const onBack = () => {
+    navigate(-1);
+  };
+
   const [reviewText, setReviewText] = useState("");
 
   const handleReviewChange = (event) => {
@@ -65,7 +76,14 @@ const ComplimentPage = () => {
   return (
     <ComplimentContainer>
       <Heading>
-        <button>뒤로</button>칭찬 도장
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        칭찬 도장
       </Heading>
       <hr />
       <br />
@@ -100,7 +118,6 @@ const ComplimentPage = () => {
         * 안내사 매칭 경험과 관련없거나 부적절한 리뷰는 삭제 조치되니
         유의해주세요.
       </p>
-      <br />
       <StampButton>도장 지급</StampButton>
     </ComplimentContainer>
   );

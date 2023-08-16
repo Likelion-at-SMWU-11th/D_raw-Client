@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Service4Container = styled.div`
   text-align: center;
@@ -13,6 +13,9 @@ const Service4Container = styled.div`
 
 const Heading = styled.h3`
   font-weight: bold;
+  margin-left: -20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 `;
 
 const Title = styled.h3`
@@ -43,6 +46,7 @@ const SquareButtonContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
   margin-top: 5px;
+  margin-left: -20px;
 `;
 
 const SquareButton = styled.button`
@@ -63,8 +67,8 @@ const InputContainer = styled.div`
 `;
 
 const TextInput = styled.textarea`
-  width: 100%;
-  height: 100px;
+  width: 270px;
+  height: 80px;
   resize: none;
   text-align: left;
 `;
@@ -76,7 +80,8 @@ const MaxLengthIndicator = styled.span`
 `;
 
 const NextButton = styled.button`
-  padding: 10px 160px;
+  padding: 10px 140px;
+  margin-left: -20px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -89,6 +94,12 @@ const NextButton = styled.button`
 `;
 
 const Service4Page = () => {
+  const navigate = useNavigate();
+
+  const onBack = () => {
+    navigate(-1);
+  };
+
   const [preferredGender, setPreferredGender] = useState("");
   const [selectedCareNeeds, setSelectedCareNeeds] = useState([]);
   const [additionalInquiry, setAdditionalInquiry] = useState("");
@@ -121,7 +132,16 @@ const Service4Page = () => {
 
   return (
     <Service4Container>
-      <Heading>매칭 신청</Heading>
+      <Heading>
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        매칭 신청
+      </Heading>
       <hr />
       <Title>
         원하시는 디지털 서비스에 대해
@@ -215,7 +235,7 @@ const Service4Page = () => {
         </MaxLengthIndicator>
       </InputContainer>
       <br />
-      <Link to="/service5">
+      <Link to="/match_type">
         <NextButton disabled={!isFormValid}>다음</NextButton>
       </Link>
     </Service4Container>

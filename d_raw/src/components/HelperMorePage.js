@@ -21,7 +21,7 @@ const LeftAlignedHeading = styled.div`
 
 const Heading = styled.h3`
   margin-left: 30px;
-  margin-top: 10px;
+  margin-top: -15px;
   font-weight: bold;
 `;
 const BoxContainer = styled.div`
@@ -34,6 +34,18 @@ const Describe = styled.h4`
   margin-left: -30px;
   margin-top: 10px;
   margin-bottom: -5px;
+`;
+
+const Greeting = styled.h4`
+  margin-left: 20px;
+  color: black;
+`;
+
+const MoreImage = styled.img`
+  margin-left: -55px;
+  margin-top: 10px;
+  width: 55px;
+  height: 50px;
 `;
 
 const Box = styled.div`
@@ -53,8 +65,9 @@ const HelperMorePage = () => {
     <MoreContainer>
       <LeftAlignedHeading>
         <Heading>
-          <div>
-            <h4>안녕하세요. 김눈송님!</h4>
+          <div style={{ display: "flex", alignItems: "flex-start" }}>
+            <MoreImage src="moreuser.png" alt="moreuser" />
+            <Greeting>안녕하세요. 김눈송님!</Greeting>
           </div>
         </Heading>
         <BoxContainer>

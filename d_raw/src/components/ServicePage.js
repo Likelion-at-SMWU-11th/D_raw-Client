@@ -1,7 +1,7 @@
 // ServicePage.js
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DatePicker from "./DatePicker";
 import TimePickerComponent from "./TimePicker";
 
@@ -22,6 +22,7 @@ const ServiceContainer = styled.div`
 
 const Heading = styled.h3`
   font-weight: bold;
+  margin-left: -20px;
 `;
 
 const Title = styled.h3`
@@ -30,15 +31,18 @@ const Title = styled.h3`
 `;
 
 const NextButton = styled.button`
+  position: fixed; /* 고정 위치 설정 */
+  bottom: 15%; /* 하단으로 고정 */
+  margin-left: -10px; /* 중앙 정렬을 위해 왼쪽으로 절반 이동 */
+  transform: translateX(-50%); /* 가운데 정렬 */
   padding: 10px 150px;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.5;
-  border: 3px solid ${(props) => (props.active ? "orange" : "#ff971e")}; // 주황색으로 변경
+  border: 3px solid ${(props) => (props.active ? "orange" : "#ff971e")};
   color: white;
-  background: ${(props) =>
-    props.active ? "#ff971e" : "orange"}; // 주황색과 회색을 바꿈
+  background: ${(props) => (props.active ? "#ff971e" : "orange")};
   white-space: nowrap;
   cursor: ${(props) => (props.active ? "pointer" : "default")};
 `;
@@ -46,6 +50,7 @@ const NextButton = styled.button`
 const Image = styled.img`
   width: 100%;
   height: 27px;
+  margin-left: -20px;
 `;
 
 const Content = styled.h4`
@@ -53,6 +58,11 @@ const Content = styled.h4`
 `;
 
 const ServicePage = () => {
+  const navigate = useNavigate();
+
+  const onBack = () => {
+    navigate(-1);
+  };
   const [isDateSelected, setIsDateSelected] = useState(false);
   const [isTimeSelected, setIsTimeSelected] = useState(false);
 
@@ -71,7 +81,16 @@ const ServicePage = () => {
   return (
     <ThemeProvider theme={theme}>
       <ServiceContainer>
-        <Heading>매칭 신청</Heading>
+        <Heading>
+          <img
+            src="/images/back.png"
+            className="GoBackButton"
+            onClick={onBack}
+            width="20"
+            height="20"
+          />
+          매칭 신청
+        </Heading>
         <hr />
         <Image src="step1.png" alt="step1" />
         <Title>
@@ -82,21 +101,16 @@ const ServicePage = () => {
         <br />
         <div style={{ display: "flex", alignItems: "flex-start" }}>
           <Content>날짜</Content>
-          <div style={{ marginLeft: "60px", textAlign: "center" }}>
-            <DatePicker onSelect={handleDateSelect} />
-          </div>
+          <DatePicker onSelect={handleDateSelect} />
         </div>
+        <br />
         <br />
         <hr />
         <br />
         <div style={{ display: "flex", alignItems: "flex-start" }}>
           <Content>시작시간</Content>
-          <div style={{ marginLeft: "80px", textAlign: "center" }}>
-            <TimePickerComponent onTimeSelect={handleTimeSelect} />
-          </div>
+          <TimePickerComponent onTimeSelect={handleTimeSelect} />
         </div>
-        <br />
-        <br />
         <Link to="/service2">
           <NextButton active={isNextButtonActive}>다음</NextButton>
         </Link>

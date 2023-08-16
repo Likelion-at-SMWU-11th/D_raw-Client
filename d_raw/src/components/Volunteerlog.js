@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const VolunteerlogContainer = styled.div`
   text-align: center;
@@ -32,7 +33,7 @@ const CompImage = styled.img`
 const Textarea = styled.textarea`
   margin-left: -20px;
   padding: 40px;
-  width: 250px;
+  width: 230px;
   height: 100px;
   white-space: 280px;
 `;
@@ -70,6 +71,12 @@ const StampButton = styled.button`
 `;
 
 const Volunteerlog = () => {
+  const navigate = useNavigate();
+
+  const onBack = () => {
+    navigate(-1);
+  };
+
   const [reviewText, setReviewText] = useState("");
 
   const handleReviewChange = (event) => {
@@ -80,6 +87,13 @@ const Volunteerlog = () => {
   return (
     <VolunteerlogContainer>
       <Heading>
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
         봉사 일지
         <hr />
       </Heading>
@@ -108,8 +122,7 @@ const Volunteerlog = () => {
         value={reviewText}
         onChange={handleReviewChange}
         maxLength="300"
-        placeholder="봉사 시간을 받기 위해서는 보다 구체적인 내용이
-        필요합니다. 활동 내용을 정확하게 적어주세요."
+        placeholder="봉사 시간을 받기 위해서는 보다 구체적인 내용이 필요합니다. 활동 내용을 정확하게 적어주세요."
       ></Textarea>
       <CharCount>({reviewText.length}/300)</CharCount>
       <br />
