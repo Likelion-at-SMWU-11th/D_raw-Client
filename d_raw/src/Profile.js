@@ -19,6 +19,10 @@ const Profile = () => {
     navigate("/profile/edit/date");
   };
 
+  const goToReview = () => {
+    navigate("/helperdetail");
+  };
+
   /*   const goToReview = () => {
     navigate("리뷰페이지");
   }; */
@@ -137,7 +141,7 @@ const Profile = () => {
             <img
               src="/images/next.png"
               className="GoNextButton"
-              /*               onClick={goToReview} */
+              onClick={goToReview}
               width="20"
               height="20"
             />
