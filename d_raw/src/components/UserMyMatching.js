@@ -88,7 +88,7 @@ const UserMyMatching = () => {
       <BoxContainer>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="who.png" alt="who" />
+            <Image src="/images/who.png" alt="who" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>💬 매칭 중</h2>
@@ -99,7 +99,7 @@ const UserMyMatching = () => {
         </Box>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="song.png" alt="song" />
+            <Image src="/images/song.png" alt="song" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>✔ 이용 예정</h2>
@@ -110,7 +110,7 @@ const UserMyMatching = () => {
         </Box>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="lion.jpg" alt="lion" />
+            <Image src="/images/lion.jpg" alt="lion" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>✔ 이용 완료</h2>

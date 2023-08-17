@@ -21,7 +21,7 @@ const StyledButton = styled.button`
 const ApplyButton = () => {
     return (
         <div>
-            <Link to="/service">
+            <Link to="/match/1">
             <StyledButton>바로 신청하기 ▶</StyledButton></Link>
             <br /> 
             <Link to="/helpermatching">

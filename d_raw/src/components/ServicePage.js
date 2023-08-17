@@ -32,7 +32,7 @@ const Title = styled.h3`
 
 const NextButton = styled.button`
   position: fixed; /* 고정 위치 설정 */
-  bottom: 15%; /* 하단으로 고정 */
+  margin-top: 280px; /* 하단으로 고정 */
   margin-left: -10px; /* 중앙 정렬을 위해 왼쪽으로 절반 이동 */
   transform: translateX(-50%); /* 가운데 정렬 */
   padding: 10px 150px;
@@ -92,7 +92,7 @@ const ServicePage = () => {
           매칭 신청
         </Heading>
         <hr />
-        <Image src="step1.png" alt="step1" />
+        <Image src="/images/step1.png" alt="step1" />
         <Title>
           도움이 필요한 날짜와 시간을
           <br />
@@ -111,7 +111,7 @@ const ServicePage = () => {
           <Content>시작시간</Content>
           <TimePickerComponent onTimeSelect={handleTimeSelect} />
         </div>
-        <Link to="/service2">
+        <Link to="/match/2">
           <NextButton active={isNextButtonActive}>다음</NextButton>
         </Link>
       </ServiceContainer>

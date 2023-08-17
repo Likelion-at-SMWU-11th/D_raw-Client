@@ -49,14 +49,14 @@ const Footer = () => {
       </Link>
 
       {/* '내 매칭', '상담하기', '더보기' 아이콘은 Link를 통해 각각의 페이지로 이동하도록 설정합니다 */}
-      <Link to="/usermymatching">
+      <Link to="/match/mypage/user">
         <IconWithText
           imageSrc={icons[1].imageSrc}
           text={icons[1].text}
           size={icons[1].size}
         />
       </Link>
-      <Link to="/service">
+      <Link to="/match/1">
         <IconWithText
           imageSrc={icons[2].imageSrc}
           text={icons[2].text}

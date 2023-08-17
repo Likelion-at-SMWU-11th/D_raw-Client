@@ -99,7 +99,7 @@ const Service3Page = () => {
         매칭 신청
       </Heading>
       <hr />
-      <Image src="step3.png" alt="step3" />
+      <Image src="/images/step3.png" alt="step3" />
       <Title>
         안내를 받으실 디지털 약자에
         <br />
@@ -186,7 +186,7 @@ const Service3Page = () => {
       <br />
       <br />
       <br />
-      <Link to="/service4">
+      <Link to="/match/4">
         <NextButton disabled={!isFormValid}>다음</NextButton>
       </Link>
     </Service3Container>

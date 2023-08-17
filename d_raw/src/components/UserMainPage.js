@@ -41,7 +41,7 @@ const MainScreen = () => {
       <LeftAlignedHeading>
         <h3>우수 D:raw 안내사</h3>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="song.png" alt="song" />
+          <MainImage src="/images/song.png" alt="song" />
           <div
             style={{
               marginLeft: "10px",
@@ -59,7 +59,7 @@ const MainScreen = () => {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="wade.jpg" alt="wade" />
+          <MainImage src="/images/wade.jpg" alt="wade" />
           <div
             style={{
               marginLeft: "10px",
@@ -77,7 +77,7 @@ const MainScreen = () => {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="lion.jpg" alt="lion" />
+          <MainImage src="/images/lion.jpg" alt="lion" />
           <div
             style={{
               marginLeft: "10px",
@@ -95,7 +95,7 @@ const MainScreen = () => {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <MainImage src="dog.jpg" alt="dog" />
+          <MainImage src="/images/dog.jpg" alt="dog" />
           <div
             style={{
               marginLeft: "10px",

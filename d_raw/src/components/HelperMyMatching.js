@@ -84,8 +84,8 @@ const MatchingButton = styled.button`
 const Image = styled.img`
   margin-top: 23px;
   margin-left: 10px;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 `;
 
 const HelperMyMatching = () => {
@@ -104,7 +104,7 @@ const HelperMyMatching = () => {
       <BoxContainer>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="painting.png" alt="painting" />
+            <Image src="/images/painting.png" alt="painting" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>✔ 안내예정</h2>
@@ -115,7 +115,7 @@ const HelperMyMatching = () => {
         </Box>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="painting.png" alt="painting" />
+            <Image src="/images/painting.png" alt="painting" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>✔ 지급 완료</h2>
@@ -128,7 +128,7 @@ const HelperMyMatching = () => {
         </Box>
         <Box>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Image src="painting.png" alt="painting" />
+            <Image src="/images/painting.png" alt="painting" />
             <div style={{ marginLeft: "5px", textAlign: "center" }}>
               <Name>D:raw</Name>
               <h2>✔ 지급 완료</h2>

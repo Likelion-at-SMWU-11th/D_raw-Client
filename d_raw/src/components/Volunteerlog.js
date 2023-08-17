@@ -100,7 +100,7 @@ const Volunteerlog = () => {
       <br />
       <Describe>
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          <CompImage src="song.png" alt="song" />
+          <CompImage src="/images/song.png" alt="song" />
           <div style={{ marginLeft: "10px", textAlign: "left" }}>
             <h3>
               <strong>김눈* 안내사</strong>

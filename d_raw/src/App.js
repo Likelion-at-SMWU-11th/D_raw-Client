@@ -42,10 +42,10 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/usermain" element={<UserMainPage />} />
-          <Route path="/helpermain" element={<HelperMainPage />} />
-          <Route path="/usermymatching" element={<UserMyMatching />} />
-          <Route path="/helpermymatching" element={<HelperMyMatching />} />
+          <Route path="/main/user" element={<UserMainPage />} />
+          <Route path="/main/guide" element={<HelperMainPage />} />
+          <Route path="/match/mypage/user" element={<UserMyMatching />} />
+          <Route path="/match/mypage/guide" element={<HelperMyMatching />} />
           <Route path="/compliment" element={<ComplimentPage />} />
           <Route path="/volunteerlog" element={<Volunteerlog />} />
           <Route path="/usermore" element={<UserMorePage />} />
@@ -54,10 +54,10 @@ function App() {
           <Route path="helperaccount" element={<HelperAccount />} />
           <Route path="/notice" element={<NoticePage />} />
           <Route path="/question" element={<QuestionPage />} />
-          <Route path="/service" element={<ServicePage />} />
-          <Route path="/service2" element={<Service2Page />} />
-          <Route path="/service3" element={<Service3Page />} />
-          <Route path="/service4" element={<Service4Page />} />
+          <Route path="/match/1" element={<ServicePage />} />
+          <Route path="/match/2" element={<Service2Page />} />
+          <Route path="/match/3" element={<Service3Page />} />
+          <Route path="/match/4" element={<Service4Page />} />
           <Route path="/login" element={<Login />} />
           <Route path="/type" element={<Type />} />
           <Route path="/type/info" element={<Typeinfo />} />

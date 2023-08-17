@@ -89,7 +89,7 @@ const Service2Page = () => {
         매칭 신청
       </Heading>
       <hr />
-      <Image src="step2.png" alt="step2" />
+      <Image src="/images/step2.png" alt="step2" />
       <Title>
         안내사가 찾아갈 자택의 주소를
         <br />
@@ -133,7 +133,7 @@ const Service2Page = () => {
       <br />
       <br />
       <br />
-      <Link to="/service3">
+      <Link to="/match/3">
         <NextButton>다음</NextButton>
       </Link>
     </Service2Container>

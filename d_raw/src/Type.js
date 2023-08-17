@@ -16,7 +16,7 @@ const Type = () => {
   };
 
   const goToMain = () => {
-    navigate("/usermain");
+    navigate("/main/user");
   };
 
   return (
