@@ -20,7 +20,7 @@ const Profile = () => {
   };
 
   const goToReview = () => {
-    navigate("/helperdetail");
+    navigate("/match/profile/<int:pk>");
   };
 
   /*   프로필 사진 구현 */

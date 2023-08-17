@@ -55,7 +55,7 @@ function App() {
           <Route path="helperaccount" element={<HelperAccount />} />
           <Route path="/notice" element={<NoticePage />} />
           <Route path="/question" element={<QuestionPage />} />
-          <Route path="/helperdetail" element={<HelperDetail />} />
+          <Route path="/match/profile/<int:pk>" element={<HelperDetail />} />
           <Route path="/match/1" element={<ServicePage />} />
           <Route path="/match/2" element={<Service2Page />} />
           <Route path="/match/3" element={<Service3Page />} />
