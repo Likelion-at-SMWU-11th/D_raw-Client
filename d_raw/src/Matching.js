@@ -78,6 +78,14 @@ const Matching = () => {
     navigate("/match/profile");
   };
 
+  const goToSceduleEdit = () => {
+    navigate("/service");
+  };
+
+  const goToAddressEdit = () => {
+    navigate("/service2");
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -172,8 +180,7 @@ const Matching = () => {
               <div className="content_right">2023.8.18 금 오후 1시</div>
               <div className="content_left">종료일시</div>{" "}
               <div className="content_right">2023.8.18 금 오후 5시</div>
-              <button className="add">
-                {/* 주은이 주소 입력란으로 돌아가기              <button className="add" onClick={goToEditPage}> */}
+              <button className="add" onClick={goToSceduleEdit}>
                 수정
               </button>
             </div>
@@ -199,8 +206,7 @@ const Matching = () => {
               <div className="content_right">
                 서울특별시 용산구 청파로 47길 100
               </div>
-              <button className="add">
-                {/* 주은이 주소 입력란으로 돌아가기              <button className="add" onClick={goToEditPage}> */}
+              <button className="add" onClick={goToAddressEdit}>
                 수정
               </button>
             </div>

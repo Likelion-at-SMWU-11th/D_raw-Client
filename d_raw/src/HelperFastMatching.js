@@ -11,7 +11,7 @@ const HelperFastMatching = () => {
   const [isChecked2, setIsChecked2] = useState(false);
 
   const goMain = () => {
-    navigate("/main");
+    navigate("/helpermain");
   };
 
   const SelectedButton = styled.button`
