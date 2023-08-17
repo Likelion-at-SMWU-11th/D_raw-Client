@@ -32,7 +32,7 @@ const Title = styled.h3`
 
 const NextButton = styled.button`
   position: fixed; /* 고정 위치 설정 */
-  margin-top: 280px; /* 하단으로 고정 */
+  margin-top: 200px; /* 하단으로 고정 */
   margin-left: -10px; /* 중앙 정렬을 위해 왼쪽으로 절반 이동 */
   transform: translateX(-50%); /* 가운데 정렬 */
   padding: 10px 150px;

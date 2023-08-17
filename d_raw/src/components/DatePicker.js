@@ -31,9 +31,9 @@ const SDatePicker = styled(DatePicker)`
 `;
 
 const SelectedDate = styled.div`
-  width: 150px;
-  margin-left: -10px;
-  margin-top: 0.5rem;
+  width: 180px;
+  margin-left: -250px;
+  margin-top: 80px;
   display: inline-block;
   padding: 10px;
   border: 2px solid ${theme.palette.orange};
@@ -42,6 +42,7 @@ const SelectedDate = styled.div`
   font-weight: bold;
   color: white;
   background: orange;
+  white-space: nowrap;
 `;
 
 const DatePickerExample = () => {
