@@ -23,8 +23,13 @@ const LeftAlignedHeading = styled.div`
   font-weight: bold;
   text-align: left;
   margin-left: -5px;
-  margin-top: -25px;
+  margin-top: -27px;
   padding: 5px;
+`;
+
+const Part = styled.div`
+  margin-left: -1px;
+  margin-top: 7px;
 `;
 
 const MainScreen = () => {
@@ -108,7 +113,9 @@ const MainScreen = () => {
           </div>
         </div>
         <hr />
-        <UserFooter />
+        <Part>
+          <UserFooter />
+        </Part>
       </LeftAlignedHeading>
     </MainContainer>
   );

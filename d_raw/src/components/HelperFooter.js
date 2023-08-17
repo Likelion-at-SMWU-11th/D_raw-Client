@@ -63,13 +63,13 @@ const HelperFooter = () => {
           size={icons[2].size}
         />
       </Link>
-      <Link to="/counsel">
+      <a href="https://open.kakao.com/o/s8e9uRzf">
         <IconWithText
           imageSrc={icons[3].imageSrc}
           text={icons[3].text}
           size={icons[3].size}
         />
-      </Link>
+      </a>
       <Link to="/helpermore">
         <IconWithText
           imageSrc={icons[4].imageSrc}
