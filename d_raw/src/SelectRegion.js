@@ -38,7 +38,7 @@ const SelectRegion = () => {
   };
 
   const goToMain = () => {
-    navigate("/main");
+    navigate("/helpermain");
   };
 
   /* 여러 개 선택 가능 

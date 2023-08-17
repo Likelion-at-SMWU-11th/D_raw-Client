@@ -1,3 +1,22 @@
+.matching_time{
+    margin-top: 15px;
+    color:#FF971E;
+    border: 1px solid #F8AD9C;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+}
+
+.matching_img{
+    position: absolute;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
 .fastmatching_menu{
     margin-top: 5px;
     margin-right: 8px;
@@ -18,7 +37,8 @@
 }
 
 .fastmatching_content{
-    margin-top: 80px;
+    padding-top:150px;
+    margin-top: 180px;
     height: 100px;
     text-align: center;
 }
@@ -40,7 +60,10 @@
 
 .menu_open{
     height: 160px;
-    margin-top: 224px;
+    width: 362px;
+    margin-top: 254px;
+    margin-left: -30px;
+    padding-left: 30px;
     color:black;
     background-color: #F5F5F5;
     border-top-left-radius: 15px;

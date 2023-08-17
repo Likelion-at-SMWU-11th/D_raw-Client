@@ -112,7 +112,6 @@ const Typeinfo = () => {
             ""
           )}
         </p>
-        <button type="submit">입력 정보 저장</button>
       </div>
     </form>
   );

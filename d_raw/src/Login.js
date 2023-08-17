@@ -8,7 +8,7 @@ const Login = () => {
   const hiimgstyle = {
     height: "50px",
     width: "50px",
-    margin: "0 18px",
+    margin: "5px 0px",
   };
 
   const h2hellostyle = {
@@ -108,8 +108,8 @@ const Login = () => {
     <>
       <div class="login">
         <header></header>
-        <img src="/images/Hi.png" style={hiimgstyle} />
         <div class="content">
+          <img src="/images/Hi.png" style={hiimgstyle} />
           <p>
             <h2 style={h2hellostyle}>어서오세요!</h2>
             <h4>
@@ -122,8 +122,6 @@ const Login = () => {
               </span>
             </h4>
           </p>
-        </div>
-        <div className="App">
           <img
             className="login_Button"
             src="/images/kakao_login.png"
@@ -140,7 +138,7 @@ const Login = () => {
       <h3>D:raw 에 오신 걸 환영합니다.</h3>
       <h3>서비스 이용을 위해 로그인을 해주세요!</h3>
       <h3>가입 정보는 SNS로 공유되지 않습니다.</h3> */}
-        <div class="wrap">
+        {/*         <div class="wrap">
           <hr class="bar" />
           <span class="txt">또는</span>
           <hr class="bar" />
@@ -158,8 +156,8 @@ const Login = () => {
                 console.log(err);
               }}
             />
-          </GoogleOAuthProvider>
-        </div>
+          </GoogleOAuthProvider> 
+        </div> */}
       </div>
     </>
   );

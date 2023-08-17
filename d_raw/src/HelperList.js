@@ -7,16 +7,8 @@ const HelperList = () => {
   const navigate = useNavigate();
 
   const goToHelperProfile = () => {
-    navigate("/matching/helperlist/profile");
+    navigate("/match/helperlist/profile");
   };
-
-  /*   const onChangeCheckHelper = (checked: any, item: any) => (event: any) => {
-    if (checked) {
-      setHelperList([...helperList, item]);
-    } else if (!checked) {
-      setHelperList(helperList.filter((el) => el !== item));
-    }
-  }; */
 
   return (
     <div className="helperlist_div">
@@ -51,9 +43,9 @@ const HelperList = () => {
               </span>
             </span>
           </div>
-          <input type="checkbox" className="add_profile">
+          <button type="submit" className="add_profile">
             신청 완료
-          </input>
+          </button>
         </div>
       </div>
       {/*       두번째 */}

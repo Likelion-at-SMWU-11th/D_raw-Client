@@ -15,6 +15,10 @@ const Type = () => {
     navigate("/type/info");
   };
 
+  const goToMain = () => {
+    navigate("/usermain");
+  };
+
   return (
     <div>
       <header></header>
@@ -34,10 +38,10 @@ const Type = () => {
         <label>
           <button
             className="select_type"
-            value="helper"
-            checked={selectedValue === "helper"}
+            value="user"
+            checked={selectedValue === "user"}
             onChange={handleRadioChange}
-            /* onClick={goToNextpage} */
+            onClick={goToMain}
           >
             👤<label className="textorange">서비스 이용자</label> 입니다.{" "}
           </button>

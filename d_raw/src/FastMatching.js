@@ -29,6 +29,17 @@ const FastMatching = () => {
         />
       </header>
       <hr />
+
+      <div className="matching_time">
+        {" "}
+        <img
+          className="matching_img"
+          src="/images/clock.png"
+          width="20"
+          height="20"
+        />{" "}
+        &nbsp; &nbsp; 2023년 8월 18일 오전 00시에 매칭 종료
+      </div>
       <h3>⚡ 빠른 매칭 가능한 D:raw 안내사</h3>
       <div className="fastmatching_apply">
         안내사님이 지원하면 바로 매칭돼요!

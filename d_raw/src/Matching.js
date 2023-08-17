@@ -5,7 +5,6 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
-
 import "./static/Base.css";
 import "./static/Matching.css";
 
@@ -68,15 +67,15 @@ const Matching = () => {
   };
 
   const goToHelperList = () => {
-    navigate("/matching/helperlist");
+    navigate("/match/helperlist");
   };
 
   const goToFastMatching = () => {
-    navigate("/matching/fast");
+    navigate("/match/quick");
   };
 
   const goToProfileMatching = () => {
-    navigate("/matching/profile");
+    navigate("/match/profile");
   };
 
   return (
