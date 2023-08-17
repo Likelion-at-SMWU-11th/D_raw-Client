@@ -23,10 +23,6 @@ const Profile = () => {
     navigate("/helperdetail");
   };
 
-  /*   const goToReview = () => {
-    navigate("리뷰페이지");
-  }; */
-
   /*   프로필 사진 구현 */
 
   const [previewImage, setPreviewImage] = useState(

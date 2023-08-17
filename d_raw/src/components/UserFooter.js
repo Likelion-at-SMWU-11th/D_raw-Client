@@ -30,17 +30,17 @@ const IconWithText = ({ imageSrc, text, size }) => {
 
 const Footer = () => {
   const icons = [
-    { imageSrc: "homeicon.png", text: "홈", size: "25px" },
-    { imageSrc: "schedule.png", text: "내 매칭", size: "25px" },
-    { imageSrc: "service.png", text: "서비스 신청", size: "60px" },
-    { imageSrc: "counsel.png", text: "상담하기", size: "30px" },
-    { imageSrc: "etc.png", text: "더보기", size: "30px" },
+    { imageSrc: "images/homeicon.png", text: "홈", size: "25px" },
+    { imageSrc: "images/schedule.png", text: "내 매칭", size: "25px" },
+    { imageSrc: "images/service.png", text: "서비스 신청", size: "60px" },
+    { imageSrc: "images/counsel.png", text: "상담하기", size: "30px" },
+    { imageSrc: "images/etc.png", text: "더보기", size: "30px" },
     // 추가 아이콘 및 텍스트
   ];
 
   return (
     <FooterContainer>
-      <Link to="/usermain">
+      <Link to="/main/user">
         <IconWithText
           imageSrc={icons[0].imageSrc}
           text={icons[0].text}

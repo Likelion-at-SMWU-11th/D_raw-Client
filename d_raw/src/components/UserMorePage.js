@@ -24,6 +24,7 @@ const Heading = styled.h3`
   margin-top: -15px;
   font-weight: bold;
 `;
+
 const BoxContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -66,7 +67,7 @@ const UserMorePage = () => {
       <LeftAlignedHeading>
         <Heading>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <MoreImage src="moreuser.png" alt="moreuser" />
+            <MoreImage src="images/moreuser.png" alt="moreuser" />
             <Greeting>안녕하세요. 김눈송님!</Greeting>
           </div>
         </Heading>

@@ -24,12 +24,12 @@ const Part3 = styled.hr`
   border: 5px solid #ccc; /* 회색 선을 설정합니다 */
   border-width: 0 0 5px 0; /* 선의 아래쪽만 2px 두껍게 설정합니다 */
   width: 330px;
-  margin-left: -25px;
+  margin-left: -15px;
 `;
 
 const Part4 = styled.div`
   width: 350px;
-  margin-left: -20px;
+  margin-left: -25px;
 `;
 
 const Heading = styled.h3`
@@ -221,7 +221,8 @@ const HelperDetail = () => {
               <div>
                 <p align="left">
                   <strong>
-                    🏅 칭찬 도장을 선물했어요! <br />
+                    🏅 칭찬 도장을 선물했어요!
+                    <br />
                   </strong>
                   *******5678
                 </p>

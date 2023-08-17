@@ -66,7 +66,7 @@ const HelperMorePage = () => {
       <LeftAlignedHeading>
         <Heading>
           <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <MoreImage src="moreuser.png" alt="moreuser" />
+            <MoreImage src="images/moreuser.png" alt="moreuser" />
             <Greeting>안녕하세요. 김눈송님!</Greeting>
           </div>
         </Heading>
