@@ -12,7 +12,7 @@ const Profile = () => {
   };
 
   const goToEditCareer = () => {
-    navigate("/profile/edit/career");
+    navigate("/account/guideedit/<int:guide_id>/");
   };
 
   const goToStartDate = () => {
@@ -24,7 +24,7 @@ const Profile = () => {
   }; */
 
   const goToHelperProfile = () => {
-    navigate("match/profile/<int:pk>");
+    navigate("/match/profile/<int:pk>");
   };
 
   /*   프로필 사진 구현 */
@@ -50,11 +50,15 @@ const Profile = () => {
       formData.append("profileImage", selectedImage);
 
       try {
-        const response = await axios.post("/upload", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+        const response = await axios.post(
+          "http://127.0.0.1:8000/account/guideprofile",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
         console.log("Upload successful:", response.data);
         // 여기에서 서버 응답 처리 가능
       } catch (error) {

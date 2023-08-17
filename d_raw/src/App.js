@@ -35,6 +35,7 @@ import StartDate from "./StartDate";
 import HelperDetail from "./components/HelperDetail";
 
 import "./App.css";
+import KakaoRedirectHandler from "./KakaoRedirectHandler";
 
 function App() {
   return (
@@ -68,10 +69,17 @@ function App() {
           <Route path="/match/profile" element={<ProfileMatching />} />
           <Route path="/match/helperlist" element={<HelperList />} />
           <Route path="/match/delete" element={<Delete />} />
-          <Route path="/profile/edit" element={<Profile />} />
-          <Route path="/profile/edit/career" element={<EditCareer />} />
+          <Route path="/account/guideprofile" element={<Profile />} />
+          <Route
+            path="/account/guideedit/<int:guide_id>"
+            element={<EditCareer />}
+          />
           <Route path="/profile/edit/date" element={<StartDate />} />
           <Route path="/helpermatching" element={<HelperMatching />} />
+          <Route
+            path="/account/kakao/accesstoken/"
+            element={<KakaoRedirectHandler />}
+          />
         </Routes>
       </div>
     </Router>

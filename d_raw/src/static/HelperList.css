@@ -1,5 +1,5 @@
 div .helper_notice{
-    width: 322px;
+    width: 310px;
     height: 30px;
     line-height: 30px;
     background-color: #E0DCDC;
@@ -12,10 +12,10 @@ div .helper_notice{
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
-    
     position: relative;
     margin-top: 15px;
-    width: 322px;
+    width: 310px;
+    height: 230px;
     border: 1px solid black;
 }
 
@@ -29,6 +29,7 @@ div .helper_notice{
     margin-bottom: 10px;
     display: inline-block;
     float:right;
+    padding-bottom: 15px;
 }
 
 .helperlist_image{
@@ -75,4 +76,48 @@ div .helper_notice{
     border: 1px solid grey;
     text-align: center;
     cursor: pointer;
+}
+
+.helperlist_button{
+    width: 230px;
+    height: 56px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    color: #B3B3B3;
+    display: block;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 85px;
+    margin-right: 3px;
+    margin-left: 3px;    
+}
+
+.helperlist_button_select{
+    width: 230px;
+    height: 56px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF971E;
+    color: white;
+    display: block;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 85px;
+    margin-right: 3px;
+    margin-left: 3px;    
+}
+
+.helperlist_button_tie{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
 }

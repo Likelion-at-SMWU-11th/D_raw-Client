@@ -37,6 +37,14 @@ const HelperSuggestMatching_content = () => {
     cursor: pointer;
   `;
 
+  const axios = require("axios");
+  axios({
+    method: "get",
+    url: "/match/mypage/guide",
+  }).then((res) => {
+    console.log(res);
+  });
+
   return (
     <div>
       <form action="post">

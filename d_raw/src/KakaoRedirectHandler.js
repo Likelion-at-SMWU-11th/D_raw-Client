@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import axios from "axios";
 import Type from "./Type";
 
 const KakaoRedirectHandler = () => {

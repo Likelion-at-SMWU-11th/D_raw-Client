@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./static/Base.css";
 import "./static/FastMatching.css";
 
 const ProfileMatching = () => {
   const navigate = useNavigate();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [profileData, setProfileData] = useState(null);
   const toggleOpenMenu = () => {
     setIsOpenMenu((isOpenMenu) => isOpenMenu); //on&off 개념
   };
@@ -17,6 +19,18 @@ const ProfileMatching = () => {
   const goToDeletePage = () => {
     navigate("/match/delete");
   };
+
+  useEffect(() => {
+    // Fetch data using axios.get when the component mounts
+    axios
+      .get("/match/profile")
+      .then((response) => {
+        setProfileData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   return (
     <div>

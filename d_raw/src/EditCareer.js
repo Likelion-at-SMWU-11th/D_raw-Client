@@ -53,7 +53,7 @@ const EditCareer = () => {
 
     try {
       // axios를 사용하여 POST 요청 보내기
-      const response = axios.post("서버_주소", data);
+      const response = axios.post("/account/bestguide", data);
 
       // 서버 응답 처리
       console.log("서버 응답:", response.data);

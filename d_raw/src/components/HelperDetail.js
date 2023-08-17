@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const HelperComponent = styled.div`
   text-align: center;
@@ -67,6 +68,23 @@ const NextButton = styled.button`
 `;
 
 const HelperDetail = () => {
+  const [imageSrc, setImageSrc] = useState(""); // State for image source
+
+  useEffect(() => {
+    // Fetch the image using Axios
+    axios
+      .get("http://127.0.0.1:8000/account/guideprofile", {
+        responseType: "blob",
+      })
+      .then((response) => {
+        const url = URL.createObjectURL(response.data);
+        setImageSrc(url);
+      })
+      .catch((error) => {
+        console.error("Error fetching image:", error);
+      });
+  }, []);
+
   const navigate = useNavigate();
   const onBack = () => {
     navigate(-1);
@@ -91,7 +109,7 @@ const HelperDetail = () => {
         안내사 프로필
       </Heading>
       <hr />
-      <Image src="/images/songdetail.png" alt="song" />
+      <Image name="account_profile" src={imageSrc} alt="song" />
       <Part>
         <div
           style={{
