@@ -21,7 +21,6 @@ import Delete from "./Delete";
 import FastMatching from "./FastMatching";
 import HelperFastMatching from "./HelperFastMatching";
 import HelperList from "./HelperList";
-import HelperListProfile from "./HelperListprofile";
 import HelperMatching from "./HelperMatching";
 import HelperSuggestMatching from "./HelperSuggestMatching";
 import Login from "./Login";
@@ -64,14 +63,10 @@ function App() {
           <Route path="/type" element={<Type />} />
           <Route path="/type/info" element={<Typeinfo />} />
           <Route path="/type/info/selectregion" element={<SelectRegion />} />
-          <Route path="/match_type" element={<Matching />} />
+          <Route path="/match/check" element={<Matching />} />
           <Route path="/match/quick" element={<FastMatching />} />
           <Route path="/match/profile" element={<ProfileMatching />} />
           <Route path="/match/helperlist" element={<HelperList />} />
-          <Route
-            path="/matching/helperlist/profile"
-            element={<HelperListProfile />}
-          />
           <Route path="/match/delete" element={<Delete />} />
           <Route path="/profile/edit" element={<Profile />} />
           <Route path="/profile/edit/career" element={<EditCareer />} />

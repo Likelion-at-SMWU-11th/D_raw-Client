@@ -85,11 +85,24 @@ const Matching = () => {
   const goToAddressEdit = () => {
     navigate("/service2");
   };
+  const onBack = () => {
+    navigate(-1);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <header>신청 정보 확인</header>
+        <header>
+          {" "}
+          <img
+            src="/images/back.png"
+            className="GoBackButton"
+            onClick={onBack}
+            width="20"
+            height="20"
+          />
+          신청 정보 확인
+        </header>
         <hr />
         <br />
         <div>

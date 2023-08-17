@@ -11,11 +11,11 @@ const ProfileMatching = () => {
   };
 
   const goToEditPage = () => {
-    navigate("/matching_type");
+    navigate("/match/check");
   };
 
   const goToDeletePage = () => {
-    navigate("/matching/delete");
+    navigate("/match/delete");
   };
 
   return (

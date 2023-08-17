@@ -19,8 +19,12 @@ const Profile = () => {
     navigate("/profile/edit/date");
   };
 
-  const goToReview = () => {
+  /*   const goToReview = () => {
     navigate("/match/profile/<int:pk>");
+  }; */
+
+  const goToHelperProfile = () => {
+    navigate("match/profile/<int:pk>");
   };
 
   /*   프로필 사진 구현 */
@@ -137,7 +141,7 @@ const Profile = () => {
             <img
               src="/images/next.png"
               className="GoNextButton"
-              onClick={goToReview}
+              onClick={goToHelperProfile}
               width="20"
               height="20"
             />

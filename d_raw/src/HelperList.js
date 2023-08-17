@@ -7,12 +7,26 @@ const HelperList = () => {
   const navigate = useNavigate();
 
   const goToHelperProfile = () => {
-    navigate("/match/helperlist/profile");
+    navigate("/match/profile/<int:pk>");
+  };
+
+  const onBack = () => {
+    navigate(-1);
   };
 
   return (
     <div className="helperlist_div">
-      <header>안내사 목록</header>
+      <header>
+        {" "}
+        <img
+          src="/images/back.png"
+          className="GoBackButton"
+          onClick={onBack}
+          width="20"
+          height="20"
+        />
+        안내사 목록
+      </header>
       <hr />
       <div className="helper_notice">
         D:raw 안내사는 최대 3명까지 선택 가능합니다.{" "}
@@ -80,7 +94,7 @@ const HelperList = () => {
           </button>
         </div>
       </div>
-      <div className="helperlist">
+      {/*       <div className="helperlist">
         <div className="helper">
           <br />
           <div className="helperlist_content_left">
@@ -96,7 +110,7 @@ const HelperList = () => {
             />
             <br />
             <span className="helperlist_image_detail">
-              상세프로필 {/* &nbsp; */}
+              상세프로필
               <span
                 className="helperlist_image_detail"
                 onClick={goToHelperProfile}
@@ -110,7 +124,7 @@ const HelperList = () => {
         <button type="submit" className="add_profile">
           신청 완료
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
