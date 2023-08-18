@@ -20,7 +20,7 @@ const Type = () => {
   };
 
   return (
-    <div>
+    <div className="type_div">
       <header></header>
       <br />
       <div className="type">
