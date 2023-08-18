@@ -17,7 +17,7 @@ const Delete = () => {
         취소상세는 내 예약에서 확인할 수 있습니다.
       </div>
       <div>
-        <button className="submit">내 매칭으로 이동</button>
+        <button className="submit_bottom_delete">내 매칭으로 이동</button>
       </div>
     </div>
   );

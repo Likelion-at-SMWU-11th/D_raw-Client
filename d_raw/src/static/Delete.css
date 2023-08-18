@@ -9,5 +9,26 @@
     padding-top: 60%;
     display:center;
     text-align: center;
+    font-size: 14px;
+}
+
+.submit_bottom_delete{
+    border: none;
+    background-color: #FF971E;
+    color: white;
+    display: block;
+    width: 340px;
+    height: 56px;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 900;
     font-size: 15px;
+    margin-left: -30px;
+    margin-right: 30px;
+
+/*     하단에 위치시키기 */
+    position: fixed;
+    bottom: 400px;
 }

@@ -178,9 +178,11 @@ const HelperFastMatching = () => {
         <br />
         <label>
           <button
-            type="submit"
+            type="submit_bottom"
             onClick={goMain}
-            className={isChecked1 || isChecked2 ? "submit" : "none-apply"}
+            className={
+              isChecked1 || isChecked2 ? "submit_bottom" : "none-apply"
+            }
           >
             지원하기
           </button>

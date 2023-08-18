@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import "./static/Base.css";
@@ -118,9 +119,11 @@ const HelperSuggestMatching_content = () => {
         <br />
         <label>
           <button
-            type="submit"
+            type="submit_bottom"
             onClick={goMain}
-            className={isChecked1 || isChecked2 ? "submit" : "none-apply"}
+            className={
+              isChecked1 || isChecked2 ? "submit_bottom" : "none-apply"
+            }
           >
             수락하기
           </button>
