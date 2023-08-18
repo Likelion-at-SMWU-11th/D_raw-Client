@@ -203,7 +203,9 @@ const Matching = () => {
           <>
             <div>
               <div className="content_left">시작일시</div>{" "}
-              <div className="content_right">2023.8.18 금 오후 1시</div>
+              <div className="content_right">
+                &nbsp;&nbsp;&nbsp;2023.8.18 금 오후 1시
+              </div>
               <div className="content_left">종료일시</div>{" "}
               <div className="content_right">2023.8.18 금 오후 5시</div>
               <button className="add" onClick={goToSceduleEdit}>

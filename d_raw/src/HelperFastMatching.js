@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import "./static/Base.css";
@@ -11,8 +12,21 @@ const HelperFastMatching = () => {
   const [isChecked2, setIsChecked2] = useState(false);
 
   const goMain = () => {
-    navigate("/helpermain");
+    navigate("/main/guide");
   };
+
+  useEffect(() => {
+    // Fetch data using axios.get when the component mounts
+    axios
+      .get("/match/mypage/guide")
+      .then((response) => {
+        console.log(response);
+        /*         setProfileData(response.data); */
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   const SelectedButton = styled.button`
     width: 60px;

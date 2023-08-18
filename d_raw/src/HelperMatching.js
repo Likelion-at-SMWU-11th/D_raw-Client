@@ -88,8 +88,8 @@ const HelperMatching = () => {
       </div>
       <div className="activeComponent">
         {activeComponent === "A" && <HelperFastMatching />}
+        {/*         {activeComponent === "B" && <HelperSuggestMatching_content />} */}
         {activeComponent === "B" && <HelperSuggestMatching />}
-        {/* {activeComponent === "B" && <HelperSuggestMatching_content />} */}
       </div>
     </div>
   );

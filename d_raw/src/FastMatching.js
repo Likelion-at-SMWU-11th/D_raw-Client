@@ -44,7 +44,6 @@ const FastMatching = () => {
         />
       </header>
       <hr />
-
       <div className="matching_time">
         {" "}
         <img
@@ -59,6 +58,10 @@ const FastMatching = () => {
       <div className="fastmatching_apply">
         안내사님이 지원하면 바로 매칭돼요!
       </div>
+      <br /> <br />
+      <br /> <br />
+      <br /> <br />
+      <br /> <br />
       <div className="fastmatching_content">
         <span className="icon">👀</span>
         <br /> <br />

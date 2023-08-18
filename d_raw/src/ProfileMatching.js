@@ -53,11 +53,13 @@ const ProfileMatching = () => {
         />{" "}
         &nbsp; &nbsp; 2023년 8월 18일 오전 00시에 매칭 종료
       </div>
-
       <h3>🕵🏻 내가 선택한 안내사 프로필</h3>
       <div className="fastmatching_apply">
         안내사님이 수락하면 바로 매칭돼요!
       </div>
+      <br /> <br />
+      <br /> <br />
+      <br /> <br />
       <div className="fastmatching_content">
         <span className="icon">👀</span>
         <br /> <br />
@@ -65,6 +67,7 @@ const ProfileMatching = () => {
         <br />
         <span>살펴보는 중입니다</span>
       </div>
+      <br /> <br />
       <br />
       {isOpenMenu ? (
         <>
