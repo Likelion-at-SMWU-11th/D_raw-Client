@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import styled from "styled-components";
 import "./static/Base.css";
 import "./static/HelperList.css";
@@ -12,6 +13,27 @@ const HelperList = () => {
 
   const goAfterSelect = () => {
     navigate("/match/check");
+
+    if (isChecked1 || isChecked2) {
+      // Prepare data for the POST request
+      const selectedData = {
+        isChecked1,
+        isChecked2,
+        // Add more selected values if needed
+      };
+
+      // Make the POST request using Axios
+      axios
+        .post("/match/profile", selectedData)
+        .then((response) => {
+          console.log("POST success:", response.data);
+          // Handle success if needed
+        })
+        .catch((error) => {
+          console.error("POST error:", error);
+          // Handle error if needed
+        });
+    }
   };
 
   const goToHelperProfile = () => {

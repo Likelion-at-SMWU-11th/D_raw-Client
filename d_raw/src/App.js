@@ -36,6 +36,7 @@ import HelperDetail from "./components/HelperDetail";
 
 import "./App.css";
 import KakaoRedirectHandler from "./KakaoRedirectHandler";
+import Helper from "./Helper";
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
             path="/account/kakao/accesstoken/"
             element={<KakaoRedirectHandler />}
           />
+          <Route path="/test" element={<Helper />} />
         </Routes>
       </div>
     </Router>

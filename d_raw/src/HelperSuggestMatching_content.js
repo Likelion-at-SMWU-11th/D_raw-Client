@@ -12,7 +12,7 @@ const HelperSuggestMatching_content = () => {
   const [isChecked2, setIsChecked2] = useState(false);
 
   const goMain = () => {
-    navigate("/main");
+    navigate("/main/guide");
   };
 
   const SelectedButton = styled.button`

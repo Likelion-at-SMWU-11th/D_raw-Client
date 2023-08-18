@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./static/Base.css";
 import "./static/Matching.css";
@@ -18,6 +13,7 @@ const Matching = () => {
   const [isOpenHelper, setIsOpenHelper] = useState(false);
   const [visible, setVisible] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
+  const [checkboxValuesExist, setCheckboxValuesExist] = useState(false);
   const navigate = useNavigate();
 
   //토글 단추
@@ -78,6 +74,26 @@ const Matching = () => {
       console.error("에러:", error);
     }
   };
+
+  useEffect(() => {
+    // Fetch checkbox values using axios.get when the component mounts
+    axios
+      .get("/match/profile") // Replace with your actual server endpoint
+      .then((response) => {
+        console.log("Fetched checkbox values:", response.data);
+        // Check if checkbox values exist
+        if (
+          response.data &&
+          (response.data.isChecked1 || response.data.isChecked2)
+        ) {
+          setCheckboxValuesExist(true);
+        }
+        // ... (rest of the code)
+      })
+      .catch((error) => {
+        console.error("Error fetching checkbox values:", error);
+      });
+  }, []);
 
   const goToHelperList = () => {
     navigate("/match/helperlist");
@@ -254,8 +270,8 @@ const Matching = () => {
         {isOpenInfo ? (
           <>
             <br />
-            <div>
-              <div>기본주소</div> <div>서울특별시 용산구 청파로 47길 100</div>
+            <div className="info_user_matching">
+              <div></div>
               <button className="add">
                 {/* 주은이 주소 입력란으로 돌아가기              <button className="add" onClick={goToEditPage}> */}
                 수정
@@ -284,6 +300,10 @@ const Matching = () => {
         )}
         <br />
         <br />
+        {/* Based on checkboxValuesExist, set the default selectedValue */}
+        {checkboxValuesExist
+          ? selectedValue === "" && setSelectedValue("profile")
+          : selectedValue === "profile" && setSelectedValue("")}
         <div>
           {selectedValue === "fast" ? (
             <>
