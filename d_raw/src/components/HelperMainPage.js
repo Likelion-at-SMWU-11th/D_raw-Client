@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import axios from "axios";
 import Logo from "./Logo";
 import ApplyButton from "../ApplyButton";
 import HelperFooter from "./HelperFooter";
@@ -33,6 +34,22 @@ const LeftAlignedHeading = styled.div`
 `;
 
 const HelperMain = () => {
+  const [topGuides, setTopGuides] = useState([]);
+
+  useEffect(() => {
+    // axios.get 요청을 useEffect 내에서 사용하여 데이터 가져오기
+    async function fetchData() {
+      try {
+        const response = await axios.get("/main/guide");
+        setTopGuides(response.data); // 가져온 데이터를 상태로 설정
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <MainContainer>
       <Logo />
