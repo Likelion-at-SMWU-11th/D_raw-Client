@@ -82,6 +82,11 @@ const MatchingButton = styled.button`
   white-space: nowrap;
 `;
 
+const Part = styled.div`
+  margin-left: 3px;
+  margin-top: -5px;
+`;
+
 const Image = styled.img`
   margin-top: 23px;
   margin-left: 10px;
@@ -154,7 +159,9 @@ const HelperMyMatching = () => {
         </Box>
       </BoxContainer>
       <hr />
-      <Footer />
+      <Part>
+        <Footer />
+      </Part>
     </MatchingContainer>
   );
 };

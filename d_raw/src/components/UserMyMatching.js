@@ -73,6 +73,10 @@ const Image = styled.img`
   height: 100px;
 `;
 
+const Part = styled.div`
+  margin-left: 3px;
+`;
+
 const UserMyMatching = () => {
   const navigate = useNavigate();
 
@@ -138,7 +142,9 @@ const UserMyMatching = () => {
         </Box>
       </BoxContainer>
       <hr />
-      <Footer />
+      <Part>
+        <Footer />
+      </Part>
     </MatchingContainer>
   );
 };
