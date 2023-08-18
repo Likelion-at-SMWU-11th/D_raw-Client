@@ -22,10 +22,10 @@ const Login = () => {
   };
 
   //출처 https://stack94.tistory.com/entry/React-%EC%B9%B4%EC%B9%B4%EC%98%A4Kakao-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EA%B8%B0
-  const Rest_api_key = "c1f4055ecc63cf3fc5b2ede72fce4fa6"; //REST API KEY
-  const redirect_uri = "http://localhost:3000/auth"; //Redirect URI
+  /*   const Rest_api_key = "c1f4055ecc63cf3fc5b2ede72fce4fa6"; //REST API KEY
+  const redirect_uri = "http://localhost:3000/auth"; //Redirect URI */
 
-  /*   const Rest_api_key = "d8fd6327b24b302b1d20f0690b10d3f4"; //REST API KEY
+  const Rest_api_key = "d8fd6327b24b302b1d20f0690b10d3f4"; //REST API KEY
   const redirect_uri = "http://localhost:3000/account/kakao/accesstoken/"; //Redirect URI */
 
   // oauth 요청 URL
