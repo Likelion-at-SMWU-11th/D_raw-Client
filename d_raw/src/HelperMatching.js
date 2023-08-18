@@ -57,7 +57,7 @@ const HelperMatching = () => {
               activeComponent === "B" ? "active" : ""
             }`}
             onClick={() => handleComponentClick("B")}
-            disabled={activeComponent === "B"} // B가 활성화되었을 때만 버튼 비활성화
+            disabled={activeComponent === "B"} // A가 활성화되었을 때만 버튼 비활성화
           >
             제안 받은 매칭
           </button>
@@ -68,11 +68,28 @@ const HelperMatching = () => {
             }`}
           />
         </div>
+        {/*         <div className="helper_matching">
+          <button
+            className={`helper_matching_button ${
+              activeComponent === "B" ? "active" : ""
+            }`}
+            onClick={() => handleComponentClick("B")}
+            disabled={activeComponent === "B"} // B가 활성화되었을 때만 버튼 비활성화
+          >
+            제안 받은 매칭
+          </button>
+          <br />
+          <hr
+            className={`helper_matching_hr ${
+              activeComponent === "B" ? "active_hr" : ""
+            }`}
+          />
+        </div> */}
       </div>
       <div className="activeComponent">
         {activeComponent === "A" && <HelperFastMatching />}
-        {/*         {activeComponent === "B" && <HelperSuggestMatching />} */}
-        {activeComponent === "B" && <HelperSuggestMatching_content />}
+        {activeComponent === "B" && <HelperSuggestMatching />}
+        {/* {activeComponent === "B" && <HelperSuggestMatching_content />} */}
       </div>
     </div>
   );

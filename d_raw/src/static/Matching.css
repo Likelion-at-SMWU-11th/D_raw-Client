@@ -95,7 +95,7 @@
     float: right;
 }
 
-.submit{
+.submit_matching{
     border: none;
     background-color: #FF971E;
     color: white;
@@ -113,6 +113,6 @@
 
 /*     하단에 위치시키기 */
     position: fixed;
-    bottom: 10px;
+    bottom: 150px;
 }
 

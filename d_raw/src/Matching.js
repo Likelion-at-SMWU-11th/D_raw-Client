@@ -289,7 +289,7 @@ const Matching = () => {
               '
               <button
                 type="submit"
-                className="submit"
+                className="submit_matching"
                 onClick={goToFastMatching}
               >
                 {" "}
@@ -301,7 +301,7 @@ const Matching = () => {
               {" "}
               <button
                 type="submit"
-                className="submit"
+                className="submit_matching"
                 onClick={goToProfileMatching}
               >
                 {" "}
