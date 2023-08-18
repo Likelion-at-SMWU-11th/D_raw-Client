@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Footer from "./UserFooter";
@@ -74,6 +75,20 @@ const Image = styled.img`
 
 const UserMyMatching = () => {
   const navigate = useNavigate();
+
+  const [matchingData, setMatchingData] = useState([]);
+
+  const getUserMatchingData = async () => {
+    try {
+      const matchingResponse = await axios.get("/match/mypage/user");
+      setMatchingData(matchingResponse.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    getUserMatchingData();
+  }, []); // 빈 배열을 넣어 처음 마운트될 때 한 번만 실행되도록 설정
 
   const handleContinueClick = () => {
     navigate("/compliment");

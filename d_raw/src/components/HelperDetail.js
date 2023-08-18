@@ -109,7 +109,7 @@ const HelperDetail = () => {
         안내사 프로필
       </Heading>
       <hr />
-      <Image name="account_profile" src={imageSrc} alt="song" />
+      <Image src="/images/songdetail.png" alt="song" />
       <Part>
         <div
           style={{

@@ -75,7 +75,7 @@ function App() {
             element={<EditCareer />}
           />
           <Route path="/profile/edit/date" element={<StartDate />} />
-          <Route path="/helpermatching" element={<HelperMatching />} />
+          <Route path="/match/search" element={<HelperMatching />} />
           <Route
             path="/account/kakao/accesstoken/"
             element={<KakaoRedirectHandler />}

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import DatePicker from "./DatePicker";
 import TimePickerComponent from "./TimePicker";
 
@@ -66,17 +67,41 @@ const ServicePage = () => {
   const [isDateSelected, setIsDateSelected] = useState(false);
   const [isTimeSelected, setIsTimeSelected] = useState(false);
 
+  const [selectedDate, setSelectedDate] = useState(""); // 선택한 날짜를 저장하는 상태
+  const [selectedTime, setSelectedTime] = useState(""); // 선택한 시간을 저장하는 상태
+
   // 날짜 선택 시 호출되는 함수
-  const handleDateSelect = () => {
+  const handleDateSelect = (date) => {
+    setSelectedDate(date); // 선택한 날짜를 저장
     setIsDateSelected(true);
   };
 
   // 시간 선택 시 호출되는 함수
-  const handleTimeSelect = () => {
+  const handleTimeSelect = (time) => {
+    setSelectedTime(time); // 선택한 시간을 저장
     setIsTimeSelected(true);
   };
 
   const isNextButtonActive = isDateSelected && isTimeSelected; // 두 단계가 모두 선택되었을 때만 버튼 활성화
+
+  const handleNextClick = async () => {
+    try {
+      // 클라이언트에서 서버로 전송할 데이터
+      const dataToSend = {
+        selectedDate: selectedDate, // 날짜 데이터
+        selectedTime: selectedTime, // 시간 데이터
+      };
+
+      // axios.post를 사용하여 서버에 데이터 전송
+      const response = await axios.post("/match/1", dataToSend);
+      console.log("서버 응답:", response.data);
+
+      // 다음 페이지로 이동
+      navigate("/match/2");
+    } catch (error) {
+      console.error("에러:", error);
+    }
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -84,6 +109,7 @@ const ServicePage = () => {
         <Heading>
           <img
             src="/images/back.png"
+            alt="back"
             className="GoBackButton"
             onClick={onBack}
             width="20"
@@ -112,7 +138,9 @@ const ServicePage = () => {
           <TimePickerComponent onTimeSelect={handleTimeSelect} />
         </div>
         <Link to="/match/2">
-          <NextButton active={isNextButtonActive}>다음</NextButton>
+          <NextButton active={isNextButtonActive} onClick={handleNextClick}>
+            다음
+          </NextButton>
         </Link>
       </ServiceContainer>
     </ThemeProvider>

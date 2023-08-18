@@ -5,6 +5,7 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
+import axios from "axios";
 import "./static/Base.css";
 import "./static/Matching.css";
 
@@ -60,10 +61,22 @@ const Matching = () => {
     setSelectedValue(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    //회원 정보를 처리하거나 저장하는 로직 추가
-    console.log("SelectedValue: ", selectedValue);
+
+    try {
+      const dataToSend = {
+        selectedValue, // 사용자가 선택한 값 ('fast' 또는 'profile')
+      };
+
+      const response = await axios.post("/match/submit", dataToSend); // 서버에 데이터 전송
+      console.log("서버 응답:", response.data);
+
+      // 기존의 로직을 유지합니다.
+      console.log("SelectedValue: ", selectedValue);
+    } catch (error) {
+      console.error("에러:", error);
+    }
   };
 
   const goToHelperList = () => {
@@ -79,11 +92,11 @@ const Matching = () => {
   };
 
   const goToSceduleEdit = () => {
-    navigate("/service");
+    navigate("/match/1");
   };
 
   const goToAddressEdit = () => {
-    navigate("/service2");
+    navigate("/match/2");
   };
   const onBack = () => {
     navigate(-1);

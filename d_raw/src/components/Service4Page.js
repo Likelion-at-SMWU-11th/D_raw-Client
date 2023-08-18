@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Service4Container = styled.div`
   text-align: center;
@@ -130,11 +131,29 @@ const Service4Page = () => {
     selectedCareNeeds.length > 0 &&
     additionalInquiry !== "";
 
+  const handleNextClick = async () => {
+    try {
+      const dataToSend = {
+        preferredGender,
+        selectedCareNeeds,
+        additionalInquiry,
+      };
+
+      const response = await axios.post("/match/4", dataToSend);
+      console.log("서버 응답:", response.data);
+
+      navigate("/match/check");
+    } catch (error) {
+      console.error("에러:", error);
+    }
+  };
+
   return (
     <Service4Container>
       <Heading>
         <img
           src="/images/back.png"
+          alt="back"
           className="GoBackButton"
           onClick={onBack}
           width="20"
@@ -235,8 +254,10 @@ const Service4Page = () => {
         </MaxLengthIndicator>
       </InputContainer>
       <br />
-      <Link to="/match_type">
-        <NextButton disabled={!isFormValid}>다음</NextButton>
+      <Link to="/match/check">
+        <NextButton disabled={!isFormValid} onClick={handleNextClick}>
+          다음
+        </NextButton>
       </Link>
     </Service4Container>
   );

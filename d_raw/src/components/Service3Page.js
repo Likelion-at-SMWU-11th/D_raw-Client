@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Service3Container = styled.div`
   text-align: center;
@@ -86,11 +87,29 @@ const Service3Page = () => {
 
   const isFormValid = selectedVisualImpairment && selectedGender;
 
+  const handleNextClick = async () => {
+    try {
+      const dataToSend = {
+        birthYear: selectedBirthYear,
+        visualImpairment: selectedVisualImpairment,
+        gender: selectedGender,
+      };
+
+      const response = await axios.post("/match/3", dataToSend);
+      console.log("서버 응답:", response.data);
+
+      navigate("/match/4");
+    } catch (error) {
+      console.error("에러:", error);
+    }
+  };
+
   return (
     <Service3Container>
       <Heading>
         <img
           src="/images/back.png"
+          alt="back"
           className="GoBackButton"
           onClick={onBack}
           width="20"
@@ -187,7 +206,9 @@ const Service3Page = () => {
       <br />
       <br />
       <Link to="/match/4">
-        <NextButton disabled={!isFormValid}>다음</NextButton>
+        <NextButton disabled={!isFormValid} onClick={handleNextClick}>
+          다음
+        </NextButton>
       </Link>
     </Service3Container>
   );

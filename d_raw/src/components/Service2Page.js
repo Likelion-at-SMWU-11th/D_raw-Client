@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Service2Container = styled.div`
   text-align: center;
@@ -76,11 +77,28 @@ const Service2Page = () => {
     setDetailAddressInput(event.target.value);
   };
 
+  const handleNextClick = async () => {
+    try {
+      const dataToSend = {
+        address: addressInput,
+        detailAddress: detailAddressInput,
+      };
+
+      const response = await axios.post("/match/2", dataToSend);
+      console.log("서버 응답:", response.data);
+
+      navigate("/match/3");
+    } catch (error) {
+      console.error("에러:", error);
+    }
+  };
+
   return (
     <Service2Container>
       <Heading>
         <img
           src="/images/back.png"
+          alt="back"
           className="GoBackButton"
           onClick={onBack}
           width="20"
@@ -134,7 +152,7 @@ const Service2Page = () => {
       <br />
       <br />
       <Link to="/match/3">
-        <NextButton>다음</NextButton>
+        <NextButton onClick={handleNextClick}>다음</NextButton>
       </Link>
     </Service2Container>
   );
