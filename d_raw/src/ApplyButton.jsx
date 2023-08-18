@@ -24,7 +24,7 @@ const ApplyButton = () => {
             <Link to="/match/1">
             <StyledButton>바로 신청하기 ▶</StyledButton></Link>
             <br /> 
-            <Link to="/helpermatching">
+            <Link to="/match/search">
             <StyledButton>매칭 찾아보기 ▶</StyledButton></Link>
             <hr />
         </div>
